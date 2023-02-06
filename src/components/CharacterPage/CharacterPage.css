@@ -9,3 +9,15 @@ table {
 tr, td {
   outline: 1px solid black;
 }
+
+form {
+  text-align: center;
+}
+
+.characterNameColumn {
+  width: 30%;
+}
+
+.characterImageColumn {
+  width: 50%;
+}

@@ -16,6 +16,16 @@ function CharacterPage() {
 
   return (
     <>
+      <form>
+        <input
+          placeholder="Character Name"
+          type="text"
+        />
+        <div><img width="100px"/></div>
+        <div><img width="100px"/></div>
+        <div><img width="100px"/></div>
+
+      </form>
       <table>
         <thead>
           <tr>
