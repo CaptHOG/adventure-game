@@ -22,6 +22,8 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 
 import './App.css';
 
+import CharacterPage from '../CharacterPage/CharacterPage';
+
 function App() {
   const dispatch = useDispatch();
 
@@ -66,6 +68,10 @@ function App() {
             path="/info"
           >
             <InfoPage />
+          </ProtectedRoute>
+
+          <ProtectedRoute exact path="/characters">
+            <CharacterPage />
           </ProtectedRoute>
 
           <Route
