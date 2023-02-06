@@ -2,11 +2,24 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
-/**
- * GET route template
- */
+
+// GET /characters
 router.get('/', (req, res) => {
-  // GET route code here
+  const sqlQuery = `
+    SELECT * FROM "characters";
+  `;
+
+  pool.query(sqlQuery)
+    .then((dbRes) => {
+      const characters = dbRes.rows;
+      console.log('dbRes.rows:', characters);
+      // this gets sent to the client based on sqlQuery
+      res.send(characters);
+    })
+    .catch((dbErr) => {
+      console.error('ERROR /api/characters GET:', dbErr);
+      res.sendStatus(500);
+    })
 });
 
 /**
