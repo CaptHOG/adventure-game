@@ -7,12 +7,17 @@ import './CharacterPage.css';
 function CharacterPage() {
   const dispatch = useDispatch();
   const characters = useSelector((store) => store.characters);
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     dispatch({
       type: 'FETCH_CHARACTERS'
     })
   }, [])
+
+  const getImages = () => {
+
+  }
 
   return (
     <>
@@ -21,7 +26,7 @@ function CharacterPage() {
           placeholder="Character Name"
           type="text"
         />
-        <div><img width="100px"/></div>
+        <div><img/></div>
         <div><img width="100px"/></div>
         <div><img width="100px"/></div>
 
