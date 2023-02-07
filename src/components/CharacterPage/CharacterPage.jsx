@@ -7,17 +7,12 @@ import './CharacterPage.css';
 function CharacterPage() {
   const dispatch = useDispatch();
   const characters = useSelector((store) => store.characters);
-  const [images, setImages] = useState([]);
 
   useEffect(() => {
     dispatch({
       type: 'FETCH_CHARACTERS'
     })
   }, [])
-
-  const getImages = () => {
-
-  }
 
   return (
     <>
@@ -26,10 +21,11 @@ function CharacterPage() {
           placeholder="Character Name"
           type="text"
         />
-        <div><img/></div>
-        <div><img width="100px"/></div>
-        <div><img width="100px"/></div>
-
+        <div id="charactersDiv">
+          <div className="imgDiv"><img width="100px" src="https://www.sanbi.org/wp-content/uploads/2019/11/Copper_Honey-badger-1024x740.jpeg"/></div>
+          <div className="imgDiv"><img width="100px" src="https://www.sanbi.org/wp-content/uploads/2019/11/Copper_Honey-badger-1024x740.jpeg"/></div>
+          <div className="imgDiv"><img width="100px" src="https://www.sanbi.org/wp-content/uploads/2019/11/Copper_Honey-badger-1024x740.jpeg"/></div>
+        </div>
       </form>
       <table>
         <thead>

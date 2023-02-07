@@ -21,3 +21,14 @@ form {
 .characterImageColumn {
   width: 50%;
 }
+
+#charactersDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.imgDiv {
+  margin: 10px;
+  border: 2px solid;
+  height: 72px;
+}
