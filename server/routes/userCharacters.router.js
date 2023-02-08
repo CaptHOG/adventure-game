@@ -6,23 +6,22 @@ const {
 } = require('../modules/authentication-middleware');
 
 
-// GET /characters
+// GET /userCharacters
 router.get('/', rejectUnauthenticated, (req, res) => {
   // console.log('req.user:', req.user);
   const sqlQuery = `
-    SELECT * FROM "characters";
+    SELECT * FROM "user_characters";
   `;
 
   pool.query(sqlQuery)
     .then((dbRes) => {
-      const characters = dbRes.rows;
-      // console.log('dbRes.rows:', characters);
-      
+      const userCharacters = dbRes.rows;
+      console.log('dbRes.rows:', userCharacters);
       // this gets sent to the client based on sqlQuery
-      res.send(characters);
+      res.send(userCharacters);
     })
     .catch((dbErr) => {
-      console.error('ERROR /characters GET:', dbErr);
+      console.error('ERROR /userCharacters GET:', dbErr);
       res.sendStatus(500);
     })
 });
@@ -32,6 +31,10 @@ router.get('/', rejectUnauthenticated, (req, res) => {
  */
 router.post('/', (req, res) => {
   // POST route code here
+  console.log('req.body:', req.body);
+  const sqlQuery = `
+
+  `
 });
 
 module.exports = router;

@@ -14,9 +14,9 @@ CREATE TABLE "user" (
 CREATE TABLE "characters" (
 	"id" SERIAL PRIMARY KEY,
 	"name" VARCHAR(100) NOT NULL,
-	"image" VARCHAR(255) NOT NULL,
+	"image_url" VARCHAR(255) NOT NULL,
 	"energy_points" INT,
-	"user_id" INT REFERENCES "user" NOT NULL
+	"user_id" INT REFERENCES "user" DEFAULT 
 );
 
 CREATE TABLE "enemies" (
