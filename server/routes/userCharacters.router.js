@@ -32,9 +32,13 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 router.post('/', (req, res) => {
   // POST route code here
   console.log('req.body:', req.body);
-  const sqlQuery = `
+  const newCharacter = req.body;
 
-  `
+  const sqlQuery = `
+    INSERT INTO "user_characters" ("name", "image_url", "energy_points", "user_id")
+      VALUES
+      ($1, $2, $3, $4);
+  `;
 });
 
 module.exports = router;

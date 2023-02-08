@@ -1,9 +1,7 @@
-const userCharactersReducer = (state = {}, action) => {
+const userCharactersReducer = (state = [], action) => {
   switch (action.type) {
-    case 'SET_NAME':
-      return {...state, name: action.payload}
-    case 'SET_INFO':
-      return {...state, info: action.payload}
+    case 'SET_USER_CHARACTERS':
+      return action.payload;
     default:
       return state;
   }

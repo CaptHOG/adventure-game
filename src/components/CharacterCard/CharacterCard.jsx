@@ -1,23 +1,26 @@
-// import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 function CharacterCard({ character, nameInput }) {
-  // const [nameInput, setNameInput] = useState('');
+  const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
-
-  const dispatchUrl = (event) => {
-    // console.log('event.target.src:', event.target.src);
-  }
 
   const sendName = (event) => {
     event.preventDefault();
     console.log('sendName:');
     console.log(character.energy_points)
 
+    let newCharacter = {
+      image_url: event.target.src,
+      name: nameInput,
+      energy_points: character.energy_points,
+      user_id: user.id
+    }
+
     dispatch({
-      type: 'SET_NAME',
-      payload: nameInput
+      // send to userCharacters reducer
+      type: 'SET_USER_CHARACTERS',
+      payload: newCharacter
     })
   }
 

@@ -2,6 +2,21 @@ import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
 
+function* createCharacter(action) {
+  console.log('createCharacter action.payload:', action.payload);
+  // Send new character (action.payload) to server
+  // (POST /userCharacters)
+  try {
+    const newCharacter = action.payload;
+    const response = yield axios.post('/userCharacters', action.payload)
+    console.log(response);
+
+    yield put({ type: 'SAGA/FETCH_USER_CHARACTERS' })
+  } catch (error) {
+    console.error('Error createCharacter saga:', error)
+  }
+}
+
 // GET
 function* fetchUserCharacters() {
   try {
@@ -37,8 +52,9 @@ function* addName(action) {
 }
 
 function* userCharactersSaga() {
-  yield takeLatest('FETCH_USER_CHARACTERS', fetchUserCharacters);
+  yield takeLatest('SAGA/FETCH_USER_CHARACTERS', fetchUserCharacters);
   yield takeLatest('ADD_CHARACTER', addCharacter);
+  yield takeLatest('SAGA/CREATE_CHARACTER', createCharacter);
 }
 
 export default userCharactersSaga;

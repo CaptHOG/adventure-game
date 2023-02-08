@@ -9,6 +9,7 @@ import CharacterCard from '../CharacterCard/CharacterCard';
 function CharacterPage() {
   const dispatch = useDispatch();
   const characters = useSelector((store) => store.characters);
+  const userCharacters = useSelector((store) => store.userCharacters)
   const [nameInput, setNameInput] = useState('');
 
   useEffect(() => {
@@ -16,6 +17,16 @@ function CharacterPage() {
       type: 'FETCH_CHARACTERS'
     })
   }, [])
+
+  const something = () => {
+    console.log('saga?')
+
+    dispatch({
+      // pull from userCharacters reducer
+      type: 'SAGA/CREATE_CHARACTER',
+      payload: userCharacters
+    })
+  }
 
   return (
     <>
@@ -33,7 +44,7 @@ function CharacterPage() {
             )
           })}
         </div>
-        <button>Add Character</button>
+        <button onClick={something}>Add Character</button>
       </form>
       {/* <table>
         <thead>
