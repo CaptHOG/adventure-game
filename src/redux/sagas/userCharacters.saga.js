@@ -9,7 +9,7 @@ function* createCharacter(action) {
   try {
     const newCharacter = action.payload;
     const response = yield axios.post('/userCharacters', action.payload)
-    console.log(response);
+    console.log(response.data);
 
     yield put({ type: 'SAGA/FETCH_USER_CHARACTERS' })
   } catch (error) {
