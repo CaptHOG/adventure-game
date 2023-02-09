@@ -1,0 +1,14 @@
+.itemCard {
+  margin: 10px;
+  border: 2px solid;
+  padding: 10px;
+}
+
+#itemsDiv {
+  display: flex;
+  justify-content: center;
+}
+
+h3, p {
+  text-align: center;
+}
