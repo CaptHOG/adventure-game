@@ -1,3 +1,5 @@
+// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 
@@ -5,9 +7,9 @@ function CharacterCard({ character, nameInput }) {
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
 
-  const sendName = (event) => {
+  const sendCharacter = (event) => {
     event.preventDefault();
-    console.log('sendName:');
+    console.log('sendCharacter:');
     console.log(character.energy_points)
 
     let newCharacter = {
@@ -19,14 +21,14 @@ function CharacterCard({ character, nameInput }) {
 
     dispatch({
       // send to userCharacters reducer
-      type: 'SET_USER_CHARACTERS',
+      type: 'SET_NEW_CHARACTER',
       payload: newCharacter
     })
   }
 
   return (
     <>
-      <div className="imgDiv" onClick={sendName}>
+      <div className="imgDiv" onClick={sendCharacter}>
         <img 
           height="100px"
           width="100px"

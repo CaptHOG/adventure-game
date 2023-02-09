@@ -4,27 +4,33 @@ import { useEffect, useState } from 'react';
 import './CharacterPage.css';
 // import axios from 'axios';
 import CharacterCard from '../CharacterCard/CharacterCard';
+import UserCharacterTable from '../UserCharacterTable/UserCharacterTable';
 
 
 function CharacterPage() {
   const dispatch = useDispatch();
   const characters = useSelector((store) => store.characters);
-  const userCharacters = useSelector((store) => store.userCharacters)
+  const userCharacters = useSelector((store) => store.userCharacters);
+  const newCharacter = useSelector((store) => store.newCharacter);
   const [nameInput, setNameInput] = useState('');
 
   useEffect(() => {
     dispatch({
       type: 'FETCH_CHARACTERS'
     })
-  }, [])
+    dispatch({
+      type: 'SAGA/FETCH_USER_CHARACTERS'
+    })
 
-  const something = () => {
+  }, []);
+
+  const createCharacter = () => {
     console.log('saga?')
 
     dispatch({
       // pull from userCharacters reducer
       type: 'SAGA/CREATE_CHARACTER',
-      payload: userCharacters
+      payload: newCharacter
     })
   }
 
@@ -44,20 +50,22 @@ function CharacterPage() {
             )
           })}
         </div>
-        <button onClick={something}>Add Character</button>
+        <button onClick={createCharacter}>Add Character</button>
       </form>
-      {/* <table>
+      <table>
         <thead>
           <tr>
             <th colSpan="3">Characters</th>
           </tr>
         </thead>
         <tbody>
-          {characters.map((character) => {
-            return (<CharacterTable key={character.id} character={character}/>)
+          {userCharacters.map((userCharacter) => {
+            return (
+              <UserCharacterTable key={userCharacter.id} userCharacter={userCharacter}/>
+            )
           })}
         </tbody>
-      </table> */}
+      </table>
     </>
   )
 }   

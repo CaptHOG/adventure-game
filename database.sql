@@ -15,8 +15,7 @@ CREATE TABLE "characters" (
 	"id" SERIAL PRIMARY KEY,
 	"name" VARCHAR(100) NOT NULL,
 	"image_url" VARCHAR(255) NOT NULL,
-	"energy_points" INT,
-	"user_id" INT REFERENCES "user" DEFAULT 
+	"energy_points" INT
 );
 
 CREATE TABLE "enemies" (
@@ -39,4 +38,12 @@ CREATE TABLE "items" (
 	"in_backpack" BOOLEAN DEFAULT 'false',
 	"character_id" INT REFERENCES "characters" NOT NULL,
 	"enemy_id" INT REFERENCES "enemies" NOT NULL
+);
+
+CREATE TABLE "user_characters" (
+	"id" SERIAL PRIMARY KEY,
+	"name" VARCHAR(100) NOT NULL,
+	"image_url" VARCHAR(255) NOT NULL,
+	"energy_points" INT,
+	"user_id" INT REFERENCES "user"
 );

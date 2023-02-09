@@ -6,7 +6,7 @@ function* fetchCharacters() {
   try {
     // response.data is the array from the characters reducer
     const response = yield axios.get('/character')
-    console.log('response.data fetchCharacters:', response.data)
+    // console.log('response.data fetchCharacters:', response.data)
     yield put({ type: 'SET_CHARACTERS', payload: response.data })
   } catch (error) {
     console.error('Error fetchCharacters characters.saga.js', error);

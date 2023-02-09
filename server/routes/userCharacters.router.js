@@ -21,7 +21,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
       res.send(userCharacters);
     })
     .catch((dbErr) => {
-      console.error('ERROR /userCharacters GET:', dbErr);
+      console.error('Error /userCharacters GET:', dbErr);
       res.sendStatus(500);
     })
 });
