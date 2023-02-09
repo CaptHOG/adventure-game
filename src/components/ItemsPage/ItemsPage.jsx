@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 function ItemsPage() {
   const dispatch = useDispatch();
   const items = useSelector((store) => store.items);
+  console.log(items);
 
   useEffect(() => {
     dispatch({
@@ -16,11 +17,15 @@ function ItemsPage() {
   return (
     <>
       <div>
-        <img 
-          height="100px"
-          width="100px"
-          src={'images/potionBlue_copy.png'}
-        />
+        {items.map((item) => {
+          return (
+            <img 
+              height="100px"
+              width="100px"
+              src={item.image_url}
+            />
+          )
+        })}
       </div>
     </>
   )
