@@ -30,14 +30,12 @@ CREATE TABLE "enemies" (
 CREATE TABLE "items" (
 	"id" SERIAL PRIMARY KEY,
 	"name" VARCHAR(100),
-	"image" VARCHAR(255),
+	"image_url" VARCHAR(255),
 	"description" VARCHAR(255),
 	"attack_damage" INT,
-	"energy_cost" INT,
 	"damage_type" VARCHAR(100),
-	"in_backpack" BOOLEAN DEFAULT 'false',
-	"character_id" INT REFERENCES "characters" NOT NULL,
-	"enemy_id" INT REFERENCES "enemies" NOT NULL
+	"energy_cost" INT,
+	"in_backpack" BOOLEAN DEFAULT 'false'
 );
 
 CREATE TABLE "user_characters" (

@@ -18,6 +18,7 @@ export default function* rootSaga() {
     registrationSaga(),
     userSaga(),
     charactersSaga(),
-    userCharactersSaga()
+    userCharactersSaga(),
+    itemsSaga()
   ]);
 }

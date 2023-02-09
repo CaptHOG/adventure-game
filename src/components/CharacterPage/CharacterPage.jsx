@@ -3,13 +3,16 @@ import { useEffect, useState } from 'react';
 import './CharacterPage.css';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import UserCharacterTable from '../UserCharacterTable/UserCharacterTable';
+import { useHistory } from 'react-router-dom';
 
 
 function CharacterPage() {
   const dispatch = useDispatch();
+  const history = useHistory();
   const characters = useSelector((store) => store.characters);
   const userCharacters = useSelector((store) => store.userCharacters);
   const newCharacter = useSelector((store) => store.newCharacter);
+  const user = useSelector((store) => store.user);
   const [nameInput, setNameInput] = useState('');
 
   useEffect(() => {
@@ -31,8 +34,14 @@ function CharacterPage() {
     })
   }
 
+  const goToItemsPage = () => {
+    console.log('something:')
+    history.push('/items');
+  }
+
   return (
     <>
+      <h2>Create Character</h2>
       <form>
         <input
           placeholder="Character Name"
@@ -52,17 +61,18 @@ function CharacterPage() {
       <table>
         <thead>
           <tr>
-            <th colSpan="3">Characters</th>
+            <th colSpan="3">{user.username}'s Characters</th>
           </tr>
         </thead>
         <tbody>
           {userCharacters.map((userCharacter) => {
             return (
-              <UserCharacterTable key={userCharacter.id} userCharacter={userCharacter}/>
+              <UserCharacterTable key={userCharacter.id} userCharacter={userCharacter} />
             )
           })}
         </tbody>
       </table>
+      <button onClick={goToItemsPage}>Continue</button>
     </>
   )
 }   

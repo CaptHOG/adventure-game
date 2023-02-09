@@ -70,11 +70,12 @@ router.delete('/:id', rejectUnauthenticated, (req, res) => {
 
   pool.query(queryText, queryValues)
     .then((dbRes) => {
-      console.log('dbRes.rows:', dbRes.rows)
+      console.log('dbRes.rows:', dbRes.rows);
       res.sendStatus(200);
     })
     .catch((dbErr) => {
-      console.error('Error userCharacters delete:', dbErr)
+      console.error('Error userCharacters delete:', dbErr);
+      res.sendStatus(500);
     })
 })
 

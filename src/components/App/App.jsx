@@ -23,6 +23,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import './App.css';
 
 import CharacterPage from '../CharacterPage/CharacterPage';
+import ItemsPage from '../ItemsPage/ItemsPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -72,6 +73,10 @@ function App() {
 
           <ProtectedRoute exact path="/characters">
             <CharacterPage />
+          </ProtectedRoute>
+
+          <ProtectedRoute exact path="/items">
+            <ItemsPage />
           </ProtectedRoute>
 
           <Route

@@ -32,6 +32,10 @@ function Nav() {
               Characters
             </Link>
 
+            <Link className="navLink" to="/items">
+              Items
+            </Link>
+
             <Link className="navLink" to="/info">
               Info Page
             </Link>
