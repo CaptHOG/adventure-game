@@ -1,8 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-// import CharacterTable from '../CharacterTable/CharacterTable';
 import './CharacterPage.css';
-// import axios from 'axios';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import UserCharacterTable from '../UserCharacterTable/UserCharacterTable';
 
@@ -21,14 +19,13 @@ function CharacterPage() {
     dispatch({
       type: 'SAGA/FETCH_USER_CHARACTERS'
     })
-
   }, []);
 
   const createCharacter = () => {
     console.log('saga?')
 
     dispatch({
-      // pull from userCharacters reducer
+      // pull from newCharacter reducer
       type: 'SAGA/CREATE_CHARACTER',
       payload: newCharacter
     })
@@ -77,4 +74,3 @@ export default CharacterPage;
 // (Honey Badger) https://www.sanbi.org/wp-content/uploads/2019/11/Copper_Honey-badger-1024x740.jpeg
 // (Red Dino) https://www.pinclipart.com/picdir/middle/558-5589124_red-dinosaur-cartoon-clipart.png
 // (Superhero) https://www.clipartkey.com/mpngs/m/6-68696_transparent-superheroes-clipart-female-flying-superhero-cartoon.png
-

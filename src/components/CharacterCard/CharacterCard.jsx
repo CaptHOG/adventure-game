@@ -1,5 +1,3 @@
-// import { useEffect } from 'react';
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 
@@ -20,7 +18,7 @@ function CharacterCard({ character, nameInput }) {
     }
 
     dispatch({
-      // send to userCharacters reducer
+      // send to newCharacter reducer
       type: 'SET_NEW_CHARACTER',
       payload: newCharacter
     })

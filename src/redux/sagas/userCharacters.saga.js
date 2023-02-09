@@ -29,9 +29,27 @@ function* fetchUserCharacters() {
   }
 }
 
+function* deleteCharacter(action) {
+  try {
+    const response = yield axios.delete(`/userCharacters/${action.payload.characterId}`)
+
+    const idToSend = {
+      userId: action.payload.user_id,
+      characterId: action.payload.characterId
+    }
+
+    yield put({ type: 'DELETE_CHARACTER', payload: idToSend })
+    // yield put to bring the DOM back in sync
+    yield put({ type: 'SAGA/FETCH_USER_CHARACTERS' })
+  } catch (error) {
+    console.error('Error deleteCharacter saga:', error)
+  }
+}
+
 function* userCharactersSaga() {
   yield takeLatest('SAGA/FETCH_USER_CHARACTERS', fetchUserCharacters);
   yield takeLatest('SAGA/CREATE_CHARACTER', createCharacter);
+  yield takeLatest('SAGA/DELETE_CHARACTER', deleteCharacter);
 }
 
 export default userCharactersSaga;
