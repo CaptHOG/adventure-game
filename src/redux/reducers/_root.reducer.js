@@ -5,7 +5,7 @@ import characters from './characters.reducer';
 import newCharacter from './newCharacter.reducer';
 import userCharacters from './userCharacters.reducer';
 import selectedCharacter from './selectedCharacter.reducer';
-import itemsReducer from './items.reducer';
+import items from './items.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
