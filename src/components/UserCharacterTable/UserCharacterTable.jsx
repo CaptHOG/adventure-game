@@ -28,7 +28,7 @@ function UserCharacterTable({ userCharacter }) {
       energy_points: userCharacter.energy_points,
       user_id: userCharacter.user_id
     }
-    console.log('selectedCharacter:', selectedCharacter);
+    // console.log('selectedCharacter from UserCharacterTable:', selectedCharacter);
 
     dispatch({
       type: 'SET_SELECTED_CHARACTER',

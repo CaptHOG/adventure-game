@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 function ItemCard({ item }) {
   const dispatch = useDispatch();
-  const selectedCharacter = useSelector((store) => store.selectedCharacter);
+  // const selectedCharacter = useSelector((store) => store.selectedCharacter);
 
   const addToBackpack = () => {
     console.log('add to pack:', item);
@@ -13,7 +13,7 @@ function ItemCard({ item }) {
       payload: item
     })
 
-    console.log('selectedCharacter:', selectedCharacter);
+    // console.log('selectedCharacter:', selectedCharacter);
   }
 
   return (

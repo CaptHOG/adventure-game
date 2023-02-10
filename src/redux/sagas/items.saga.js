@@ -1,6 +1,8 @@
 import { takeLatest, put } from "redux-saga/effects";
 import axios from "axios";
 
+
+// GET /items
 function* fetchItems() {
   try {
     const response = yield axios.get('/items')
@@ -14,5 +16,6 @@ function* fetchItems() {
 function* itemsSaga() {
   yield takeLatest('SAGA/FETCH_ITEMS', fetchItems);
 }
+
 
 export default itemsSaga;

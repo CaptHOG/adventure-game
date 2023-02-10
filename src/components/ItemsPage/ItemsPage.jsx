@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import ItemCard from "../ItemCard/ItemCard";
+import Backpack from "../Backpack/Backpack";
 import './ItemsPage.css';
 
 
@@ -12,9 +13,9 @@ function ItemsPage() {
   const selectedCharacter = useSelector((store) => store.selectedCharacter);
   const backpack = useSelector((store) => store.backpack);
 
-  console.log(backpack.length);
+  // console.log(backpack.length);
 
-  console.log('selectedCharacter:', selectedCharacter);
+  // console.log('selectedCharacter:', selectedCharacter);
 
   useEffect(() => {
     dispatch({
@@ -23,6 +24,13 @@ function ItemsPage() {
   }, [])
 
   const goToEncounter = () => {
+    dispatch({
+      type: 'SAGA/SEND_BACKPACK',
+      payload: backpack
+    })
+
+    console.log('backpack:', backpack)
+
     history.push('/encounter');
   }
 
@@ -40,15 +48,7 @@ function ItemsPage() {
       <div className="itemsDiv">
         {backpack.map((item) => {
           return (
-            <div className="itemCard" key={item.id}>
-              <p>{item.name}</p>
-              <img 
-                height="100px"
-                width="100px"
-                src={item.image_url}
-              />
-              <p>{item.description}!</p>
-            </div>
+            <Backpack key={item.id} item={item}/>
           )
         })}
       </div>

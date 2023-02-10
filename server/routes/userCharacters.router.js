@@ -8,7 +8,8 @@ const { rejectUnauthenticated } = require('../modules/authentication-middleware'
 router.get('/', rejectUnauthenticated, (req, res) => {
   // console.log('req.user:', req.user);
   const sqlQuery = `
-    SELECT * FROM "user_characters";
+    SELECT * FROM "user_characters"
+      ORDER BY "id";
   `;
 
   pool.query(sqlQuery)
@@ -25,8 +26,8 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 });
 
 // POST /userCharacters
-router.post('/', (req, res) => {
-  // console.log('req.body:', req.body);
+router.post('/', rejectUnauthenticated, (req, res) => {
+  console.log('req.body:', req.body);
   const newCharacter = req.body;
 
   const queryText = `
@@ -46,20 +47,20 @@ router.post('/', (req, res) => {
       res.sendStatus(201);
     })
     .catch((dbErr) => {
-      console.log('Error newCharacter POST', dbErr);
+      console.error('Error newCharacter POST', dbErr);
       res.sendStatus(500);
     });
 });
 
-// DELETE
+// DELETE /userCharacters
 router.delete('/:id', rejectUnauthenticated, (req, res) => {
   // Delete an item if it's something the logged in user added
   let characterId = req.params.id;
   // if logged in you can access user.id
   let userId = req.user.id;
 
-  console.log('userId:', userId);
-  console.log('characterId:', characterId);
+  // console.log('delete userId:', userId);
+  // console.log('delete characterId:', characterId);
 
   let queryValues = [characterId, userId];
   let queryText = `
@@ -70,11 +71,33 @@ router.delete('/:id', rejectUnauthenticated, (req, res) => {
 
   pool.query(queryText, queryValues)
     .then((dbRes) => {
-      console.log('dbRes.rows:', dbRes.rows);
+      // console.log('dbRes.rows:', dbRes.rows);
       res.sendStatus(200);
     })
     .catch((dbErr) => {
       console.error('Error userCharacters delete:', dbErr);
+      res.sendStatus(500);
+    })
+})
+
+router.put('/:id', rejectUnauthenticated, (req, res) => {
+  let selectedCharacterId = req.params.id;
+  let isSelected = true;
+
+  // console.log('selectedCharacterId:', selectedCharacterId)
+
+  let queryText = `
+    UPDATE "user_characters"
+      SET "selected"=$1
+      WHERE "id"=$2;
+  `;
+
+  pool.query(queryText, [isSelected, selectedCharacterId])
+    .then((dbRes) => {
+      res.sendStatus(200);
+    })
+    .catch((dbErr) => {
+      console.error('Error /userCharacters PUT:', dbErr);
       res.sendStatus(500);
     })
 })

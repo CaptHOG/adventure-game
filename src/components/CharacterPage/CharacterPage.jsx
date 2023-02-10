@@ -13,6 +13,7 @@ function CharacterPage() {
   const userCharacters = useSelector((store) => store.userCharacters);
   const newCharacter = useSelector((store) => store.newCharacter);
   const user = useSelector((store) => store.user);
+  const selectedCharacter = useSelector((store) => store.selectedCharacter);
   const [nameInput, setNameInput] = useState('');
 
   useEffect(() => {
@@ -34,8 +35,25 @@ function CharacterPage() {
     })
   }
 
-  const goToItemsPage = () => {
-    console.log('something:')
+  const goToItemsPage = (event) => {
+    event.preventDefault();
+
+    console.log('selectedCharacter from CharacterPage:', selectedCharacter)
+
+    let userAndCharacterIds = {
+      characterId: selectedCharacter.id,
+      user_id: user.id
+    }
+
+    console.log('userAndCharacterIds:', userAndCharacterIds)
+
+    if (selectedCharacter) {
+      dispatch({
+        type: 'SAGA/UPDATE_SELECTED_CHARACTER',
+        payload: userAndCharacterIds
+      })
+    }
+    
     history.push('/items');
   }
 

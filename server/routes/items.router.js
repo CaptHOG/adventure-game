@@ -16,7 +16,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
     .then((dbRes) => {
       const items = dbRes.rows;
       res.send(items);
-      console.log('items:', items);
+      // console.log('items:', items);
     })
     .catch((dbErr) => {
       console.error('Error /items GET:', dbErr);

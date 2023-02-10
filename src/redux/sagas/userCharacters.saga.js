@@ -1,9 +1,10 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
+
 // POST
 function* createCharacter(action) {
-  console.log('createCharacter action.payload:', action.payload);
+  // console.log('createCharacter action.payload:', action.payload);
   // Send new character (action.payload) to server
   // (POST /userCharacters)
   try {
@@ -29,6 +30,7 @@ function* fetchUserCharacters() {
   }
 }
 
+// DELETE
 function* deleteCharacter(action) {
   try {
     const response = yield axios.delete(`/userCharacters/${action.payload.characterId}`)
@@ -46,10 +48,30 @@ function* deleteCharacter(action) {
   }
 }
 
+// PUT
+function* updateCharacter(action) {
+  try {
+    const response = yield axios.put(`/userCharacters/${action.payload.characterId}`)
+
+    const idToSend = {
+      userId: action.payload.user_id,
+      characterId: action.payload.characterId
+    }
+
+    yield put({ type: 'UPDATE_CHARACTER', payload: idToSend })
+    // yield put to bring the DOM back in sync
+    yield put({ type: 'SAGA/FETCH_USER_CHARACTERS' })
+  } catch (error) {
+    console.error('Error updateCharacter saga:', error)
+  }
+}
+
 function* userCharactersSaga() {
   yield takeLatest('SAGA/FETCH_USER_CHARACTERS', fetchUserCharacters);
   yield takeLatest('SAGA/CREATE_CHARACTER', createCharacter);
   yield takeLatest('SAGA/DELETE_CHARACTER', deleteCharacter);
+  yield takeLatest('SAGA/UPDATE_SELECTED_CHARACTER', updateCharacter);
 }
+
 
 export default userCharactersSaga;
