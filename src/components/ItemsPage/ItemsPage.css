@@ -4,7 +4,7 @@
   padding: 10px;
 }
 
-#itemsDiv {
+.itemsDiv {
   display: flex;
   justify-content: center;
 }
