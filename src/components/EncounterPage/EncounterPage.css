@@ -1,0 +1,14 @@
+#characterDiv {
+  display: inline-block;
+}
+
+/* .itemCard {
+  margin: 10px;
+  border: 2px solid;
+  padding: 10px;
+} */
+
+#backpackDiv {
+  display: flex;
+  justify-content: center;
+}

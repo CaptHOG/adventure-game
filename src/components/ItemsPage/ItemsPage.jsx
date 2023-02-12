@@ -21,6 +21,9 @@ function ItemsPage() {
     dispatch({
       type: 'SAGA/FETCH_ITEMS'
     })
+    dispatch({
+      type: 'SAGA/FETCH_SELECTED_CHARACTER'
+    })
   }, [])
 
   const goToEncounter = () => {

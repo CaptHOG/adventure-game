@@ -23,6 +23,9 @@ function CharacterPage() {
     dispatch({
       type: 'SAGA/FETCH_USER_CHARACTERS'
     })
+    dispatch({
+      type: 'SAGA/FETCH_SELECTED_CHARACTER'
+    })
   }, []);
 
   const createCharacter = () => {

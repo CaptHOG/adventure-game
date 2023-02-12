@@ -4,7 +4,7 @@ const router = express.Router();
 const { rejectUnauthenticated } = require('../modules/authentication-middleware');
 
 
-// GET /userCharacters
+// GET all /userCharacters
 router.get('/', rejectUnauthenticated, (req, res) => {
   // console.log('req.user:', req.user);
   const sqlQuery = `
@@ -80,6 +80,7 @@ router.delete('/:id', rejectUnauthenticated, (req, res) => {
     })
 })
 
+// PUT /userCharacters
 router.put('/:id', rejectUnauthenticated, (req, res) => {
   let selectedCharacterId = req.params.id;
   let isSelected = true;

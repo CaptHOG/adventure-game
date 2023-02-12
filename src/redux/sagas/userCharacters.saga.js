@@ -18,15 +18,25 @@ function* createCharacter(action) {
   }
 }
 
-// GET
+// GET userCharacters
 function* fetchUserCharacters() {
   try {
-    // response.data is the array from the userCharacters reducer
     const response = yield axios.get('/userCharacters')
-    console.log('response.data fetchUserCharacters:', response.data)
+    // console.log('response.data fetchUserCharacters:', response.data)
     yield put({ type: 'SET_USER_CHARACTERS', payload: response.data })
   } catch (error) {
     console.error('Error fetchUserCharacters saga', error);
+  }
+}
+
+// GET selectedCharacter
+function* fetchSelectedCharacter() {
+  try {
+    const response = yield axios.get('/selectedCharacter')
+    console.log('fetchSelectedCharacter:', response.data)
+    yield put({ type: 'SET_SELECTED_CHARACTER', payload: response.data })
+  } catch (error) {
+    console.error('Error fetchSelectedCharacter saga:', error)
   }
 }
 
@@ -71,6 +81,7 @@ function* userCharactersSaga() {
   yield takeLatest('SAGA/CREATE_CHARACTER', createCharacter);
   yield takeLatest('SAGA/DELETE_CHARACTER', deleteCharacter);
   yield takeLatest('SAGA/UPDATE_SELECTED_CHARACTER', updateCharacter);
+  yield takeLatest('SAGA/FETCH_SELECTED_CHARACTER', fetchSelectedCharacter);
 }
 
 
