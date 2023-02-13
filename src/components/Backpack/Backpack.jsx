@@ -1,4 +1,11 @@
+import { useDispatch, useSelector } from "react-redux";
+
+
 function Backpack({ item }) {
+  const dispatch = useDispatch();
+  const selectedCharacter = useSelector((store) => store.selectedCharacter);
+
+  
 
   return (
     <>

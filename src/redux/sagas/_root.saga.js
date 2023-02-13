@@ -6,6 +6,7 @@ import userSaga from './user.saga';
 import userCharactersSaga from './userCharacters.saga';
 import itemsSaga from './items.saga';
 import backpackSaga from './backpack.saga';
+import selectedCharacterSaga from './selectedCharacter.saga';
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -22,6 +23,7 @@ export default function* rootSaga() {
     charactersSaga(),
     userCharactersSaga(),
     itemsSaga(),
-    backpackSaga()
+    backpackSaga(),
+    selectedCharacterSaga()
   ]);
 }

@@ -27,7 +27,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 
 // POST /userCharacters
 router.post('/', rejectUnauthenticated, (req, res) => {
-  console.log('req.body:', req.body);
+  // console.log('req.body:', req.body);
   const newCharacter = req.body;
 
   const queryText = `

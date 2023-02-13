@@ -25,5 +25,29 @@ router.get('/', rejectUnauthenticated, (req, res) => {
     })
 });
 
+// router.post('/', (req, res) => {
+//   console.log('req.body selectedCharacter POST:', req.body);
+
+//   const characterToPost = req.body
+
+//   const sqlQuery = `
+//   INSERT INTO "selected_character" (
+//     "name",
+//     "image_url",
+//     "energy_points"
+//   )
+//     VALUES
+//     ($1, $2, $3)
+//   `;
+//   const sqlValues = [
+//     characterToPost.name,
+//     characterToPost.image_url,
+//     characterToPost.energy_points
+//   ]
+
+//   pool.query(sqlQuery, sqlValues)
+//     .then((dbRes))
+// })
+
 
 module.exports = router;

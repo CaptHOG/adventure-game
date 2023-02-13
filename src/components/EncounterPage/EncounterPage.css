@@ -12,3 +12,49 @@
   display: flex;
   justify-content: center;
 }
+
+
+.greenDinoIdle {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/green-dino-idle-scaled.png');
+  display: inline-flex;
+  left: 30%;
+  top: 40%;
+  position: absolute;
+  /* transform: scale(-1); */
+  animation: dinoIdle 700ms steps(4) infinite;
+}
+@keyframes dinoIdle {
+  100% { background-position: -768px 0; }
+}
+
+.greenDinoKick {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/green-dino-kick-scaled.png');
+  display: inline-flex;
+  left: 30%;
+  top: 40%;
+  position: absolute;
+  /* transform: scale(-1); */
+  animation: dinoIdle 700ms steps(4) infinite;
+}
+@keyframes dinoIdle {
+  100% { background-position: -768px 0; }
+}
+
+.greenDinoHurt {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/green-dino-hurt-scaled.png');
+  display: inline-flex;
+  left: 30%;
+  top: 40%;
+  position: absolute;
+  /* transform: scale(-1); */
+  animation: dinoIdle 700ms steps(4) infinite;
+}
+@keyframes dinoIdle {
+  100% { background-position: -768px 0; }
+}

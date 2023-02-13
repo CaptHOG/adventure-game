@@ -29,17 +29,6 @@ function* fetchUserCharacters() {
   }
 }
 
-// GET selectedCharacter
-function* fetchSelectedCharacter() {
-  try {
-    const response = yield axios.get('/selectedCharacter')
-    console.log('fetchSelectedCharacter:', response.data)
-    yield put({ type: 'SET_SELECTED_CHARACTER', payload: response.data })
-  } catch (error) {
-    console.error('Error fetchSelectedCharacter saga:', error)
-  }
-}
-
 // DELETE
 function* deleteCharacter(action) {
   try {
@@ -81,7 +70,6 @@ function* userCharactersSaga() {
   yield takeLatest('SAGA/CREATE_CHARACTER', createCharacter);
   yield takeLatest('SAGA/DELETE_CHARACTER', deleteCharacter);
   yield takeLatest('SAGA/UPDATE_SELECTED_CHARACTER', updateCharacter);
-  yield takeLatest('SAGA/FETCH_SELECTED_CHARACTER', fetchSelectedCharacter);
 }
 
 

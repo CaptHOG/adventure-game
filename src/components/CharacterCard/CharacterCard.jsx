@@ -32,7 +32,7 @@ function CharacterCard({ character, nameInput }) {
           width="100px"
           src={character.image_url}
         />
-        <p>Energy Points: {character.energy_points}</p>
+        {/* <p>Energy Points: {character.energy_points}</p> */}
       </div>
     </>
   )

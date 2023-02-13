@@ -6,10 +6,11 @@ function UserCharacterTable({ userCharacter, selectedCharacter }) {
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
   const [characterRow, setCharacterRow] = useState('characterRow');
-  const [isSelected, setIsSelected] = useState(false);
+  // const [isSelected, setIsSelected] = useState(false);
   // const selectedCharacter = useSelector((store) => store.selectedCharacter);
   const userCharacters = useSelector((store) => store.userCharacters);
 
+  // DELETE
   const deleteCharacter = (userCharacter) => {
 
     let userAndCharacterIds = {
@@ -23,23 +24,15 @@ function UserCharacterTable({ userCharacter, selectedCharacter }) {
     })
   }
 
+  // SELECT
   const selectCharacter = () => {
     console.log('selected!:');
-
-    
 
     if (userCharacter.id) {
       setCharacterRow('characterRowChangeColor');
     } else {
       setCharacterRow(characterRow);
     }
-
-    // userCharacters.map((character) => {
-    //   if (character.selected == true) {
-    //     console.log('I think maybe this works?:', character.selected);
-    //     setCharacterRow('characterRowChangeColor');
-    //   }
-    // })
 
     let selectedCharacter = {
       id: userCharacter.id,

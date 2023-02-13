@@ -7,6 +7,7 @@ import userCharacters from './userCharacters.reducer';
 import selectedCharacter from './selectedCharacter.reducer';
 import items from './items.reducer';
 import backpack from './backpack.reducer';
+import energyPoints from './energyPoints.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -22,7 +23,8 @@ const rootReducer = combineReducers({
   userCharacters,
   selectedCharacter,
   items,
-  backpack
+  backpack,
+  energyPoints
 });
 
 export default rootReducer;

@@ -5,6 +5,11 @@ import './EncounterPage.css';
 
 
 function EncounterPage() {
+  const dispatch = useDispatch();
+  const selectedCharacter = useSelector((store) => store.selectedCharacter);
+  const backpack = useSelector((store) => store.backpack);
+  // const energyPoints = useSelector((store) => store.energyPoints);
+
   useEffect(() => {
     dispatch({
       type: 'SAGA/FETCH_SELECTED_CHARACTER'
@@ -14,23 +19,49 @@ function EncounterPage() {
     })
   }, [])
 
-  const dispatch = useDispatch();
-  const selectedCharacter = useSelector((store) => store.selectedCharacter);
-  const backpack = useSelector((store) => store.backpack);
+  const something = (item) => {
+
+    let selectedCharacterId = selectedCharacter[0].id;
+    console.log('selectedCharacterId:', selectedCharacterId)
+
+    console.log('item.id', item.id)
+    let characterEnergyPoints = selectedCharacter[0].energy_points
+
+    let result = characterEnergyPoints - item.energy_cost;
+    console.log('result:', result)
+
+    let dataToSend = {
+      selectedCharacterId,
+      result
+    }
+
+    dispatch({
+      type: 'SAGA/UPDATE_ENERGY_POINTS',
+      payload: dataToSend
+    })
+
+    // console.log('energy points reducer before:', energyPoints);
+    // dispatch({
+    //   type: 'SET_ENERGY',
+    //   payload: 5
+    // })
+
+    // console.log('energy points reducer after:', energyPoints);
+  }
 
   return (
     <>
       <div id="characterDiv">
-        <div class="ap-text">100 AP</div>
+        <div className="ap-text">100 AP</div>
         <progress id="ap-meter" value="100" max="100"></progress>
-        <p>{selectedCharacter[0].name}</p>
-        <div>
-          <img width="400px" src={selectedCharacter[0].image_url}/>
-        </div>
+        {/* <p>Energy Points: {energyPoints}</p> */}
+        <p>{selectedCharacter[0] && selectedCharacter[0].name}</p>
+        {/* <p>Energy Points: {selectedCharacter[0].energy_points}</p> */}
+        <div className="greenDinoIdle"></div>
         <div id="backpackDiv">
           {backpack.map((item) => {
             return (
-              <Backpack key={item.id} item={item}/>
+              <button onClick={() => something(item)}><Backpack key={item.id} item={item}/></button>
             )
           })}
         </div>
