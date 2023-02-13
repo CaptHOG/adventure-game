@@ -5,10 +5,6 @@ import './EncounterPage.css';
 
 
 function EncounterPage() {
-  const dispatch = useDispatch();
-  const selectedCharacter = useSelector((store) => store.selectedCharacter);
-  const backpack = useSelector((store) => store.backpack);
-
   useEffect(() => {
     dispatch({
       type: 'SAGA/FETCH_SELECTED_CHARACTER'
@@ -18,9 +14,15 @@ function EncounterPage() {
     })
   }, [])
 
+  const dispatch = useDispatch();
+  const selectedCharacter = useSelector((store) => store.selectedCharacter);
+  const backpack = useSelector((store) => store.backpack);
+
   return (
     <>
       <div id="characterDiv">
+        <div class="ap-text">100 AP</div>
+        <progress id="ap-meter" value="100" max="100"></progress>
         <p>{selectedCharacter[0].name}</p>
         <div>
           <img width="400px" src={selectedCharacter[0].image_url}/>

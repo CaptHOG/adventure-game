@@ -88,7 +88,11 @@ function CharacterPage() {
         <tbody>
           {userCharacters.map((userCharacter) => {
             return (
-              <UserCharacterTable key={userCharacter.id} userCharacter={userCharacter} />
+              <UserCharacterTable 
+                key={userCharacter.id} 
+                userCharacter={userCharacter} 
+                selectedCharacter={selectedCharacter}
+              />
             )
           })}
         </tbody>

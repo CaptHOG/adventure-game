@@ -3,8 +3,8 @@ const backpackReducer = (state = [], action) => {
     return [...state, action.payload];
   } else if (action.type === 'SET_BACKPACK') {
     return action.payload;
-  } else if (action.type === 'RESET_BACKPACK') {
-    return [];
+  // } else if (action.type === 'RESET_BACKPACK') {
+  //   return [];
   } else {
     return state;
   }

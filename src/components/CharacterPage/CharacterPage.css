@@ -32,3 +32,11 @@ form {
   border: 2px solid;
   padding: 10px;
 }
+
+.characterRow {
+  background-color: rgb(193, 214, 255);
+}
+
+.characterRowChangeColor {
+  background-color: rgb(206, 255, 80);
+}

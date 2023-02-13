@@ -1,9 +1,14 @@
 import { useDispatch, useSelector } from "react-redux"
+import { useState } from "react";
 
 
-function UserCharacterTable({ userCharacter }) {
+function UserCharacterTable({ userCharacter, selectedCharacter }) {
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
+  const [characterRow, setCharacterRow] = useState('characterRow');
+  const [isSelected, setIsSelected] = useState(false);
+  // const selectedCharacter = useSelector((store) => store.selectedCharacter);
+  const userCharacters = useSelector((store) => store.userCharacters);
 
   const deleteCharacter = (userCharacter) => {
 
@@ -19,7 +24,22 @@ function UserCharacterTable({ userCharacter }) {
   }
 
   const selectCharacter = () => {
-    console.log('selected!');
+    console.log('selected!:');
+
+    
+
+    if (userCharacter.id) {
+      setCharacterRow('characterRowChangeColor');
+    } else {
+      setCharacterRow(characterRow);
+    }
+
+    // userCharacters.map((character) => {
+    //   if (character.selected == true) {
+    //     console.log('I think maybe this works?:', character.selected);
+    //     setCharacterRow('characterRowChangeColor');
+    //   }
+    // })
 
     let selectedCharacter = {
       id: userCharacter.id,
@@ -38,7 +58,7 @@ function UserCharacterTable({ userCharacter }) {
 
   return (
     <>
-      <tr onClick={selectCharacter}>
+      <tr onClick={selectCharacter} className={userCharacter.selected ? 'characterRowChangeColor' : characterRow}>
         <td className="characterNameColumn"><p>{userCharacter.name}</p></td>
         <td className="characterImageColumn">
           <img src={userCharacter.image_url} width="100px"/>
