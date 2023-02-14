@@ -11,6 +11,9 @@
 #backpackDiv {
   display: flex;
   justify-content: center;
+  position: absolute;
+  top: 60%;
+  left: 5%;
 }
 
 /* --- Green Dino --- */
@@ -19,10 +22,9 @@
   height: 192px;
   background: url('/public/images/green-dino-idle-scaled.png');
   display: inline-flex;
-  left: 30%;
+  left: 20%;
   top: 40%;
   position: absolute;
-  /* transform: scale(-1); */
   animation: dinoIdle 700ms steps(4) infinite;
 }
 @keyframes dinoIdle {
@@ -34,7 +36,7 @@
   height: 192px;
   background: url('/public/images/green-dino-kick-scaled.png');
   display: inline-flex;
-  left: 30%;
+  left: 20%;
   top: 40%;
   position: absolute;
   /* transform: scale(-1); */
@@ -49,7 +51,7 @@
   height: 192px;
   background: url('/public/images/green-dino-hurt-scaled.png');
   display: inline-flex;
-  left: 30%;
+  left: 20%;
   top: 40%;
   position: absolute;
   /* transform: scale(-1); */
@@ -57,4 +59,20 @@
 }
 @keyframes dinoIdle {
   100% { background-position: -768px 0; }
+}
+/* End Green Dino */
+
+/* --- Golem --- */
+.golemIdle {
+  width: 640px;
+  height: 640px;
+  background: url('/public/images/golem-idle-scaled.png');
+  display: inline-flex;
+  left: 55%;
+  top: 10%;
+  position: absolute;
+  animation: golemIdle 1000ms steps(6) infinite;
+}
+@keyframes golemIdle {
+  100% { background-position: 0 -3840px; }
 }

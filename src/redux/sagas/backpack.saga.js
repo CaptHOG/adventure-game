@@ -10,7 +10,7 @@ function* sendBackpack(action) {
   try {
     const response = yield axios.post('/backpack', action.payload)
     console.log(response.data);
-    yield put({ type: 'RESET_BACKPACK' })
+    yield put({ type: 'SAGA/FETCH_BACKPACK' })
   } catch (error) {
     console.error('Error sendBackpack saga:', error)
   }

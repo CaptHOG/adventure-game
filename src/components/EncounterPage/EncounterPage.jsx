@@ -39,14 +39,6 @@ function EncounterPage() {
       type: 'SAGA/UPDATE_ENERGY_POINTS',
       payload: dataToSend
     })
-
-    // console.log('energy points reducer before:', energyPoints);
-    // dispatch({
-    //   type: 'SET_ENERGY',
-    //   payload: 5
-    // })
-
-    // console.log('energy points reducer after:', energyPoints);
   }
 
   return (
@@ -59,6 +51,7 @@ function EncounterPage() {
         <p>{selectedCharacter[0] && selectedCharacter[0].name}</p>
         {/* <p>Energy Points: {selectedCharacter[0].energy_points}</p> */}
         <div className={selectedCharacter[0] && selectedCharacter[0].idle_class}></div>
+        <div className="golemIdle"></div>
         <div id="backpackDiv">
           {backpack.map((item) => {
             return (

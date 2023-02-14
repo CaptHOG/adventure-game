@@ -31,8 +31,7 @@ function UserCharacterTable({ userCharacter }) {
     if (isSelected) {
       setCharacterRow('characterRowChangeColor')
       setIsSelected(false)
-    }
-    if (!isSelected) {
+    } else if (!isSelected) {
       setCharacterRow('characterRow')
       setIsSelected(true)
     }

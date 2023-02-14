@@ -15,12 +15,11 @@ function CharacterCard({ character, nameInput }) {
     if (isSelected) {
       setImgDiv('imgDiv1');
       setIsSelected(false);
-    }
-    if (!isSelected) {
+    } else if (!isSelected) {
       setImgDiv('imgDiv');
       setIsSelected(true);
     }
-
+    
     let newCharacter = {
       name: nameInput,
       energy_points: character.energy_points,
