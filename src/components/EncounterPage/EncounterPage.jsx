@@ -9,6 +9,7 @@ function EncounterPage() {
   const selectedCharacter = useSelector((store) => store.selectedCharacter);
   const backpack = useSelector((store) => store.backpack);
   const energyPoints = useSelector((store) => store.energyPoints);
+  const hitPoints = useSelector((store) => store.hitPoints);
 
   useEffect(() => {
     dispatch({
@@ -19,44 +20,59 @@ function EncounterPage() {
     })
   }, [])
 
-  const something = (item) => {
-    console.log('item.id:', item.id)
-    let characterEnergyPoints = selectedCharacter[0].energy_points
+  const handleItemClick = (item) => {
+    if (energyPoints <= 0) {
+      alert('GAME OVER')
+    } else if (hitPoints <= 0) {
+      alert('YOU WIN')
+    }
 
-    let pointsToSubtract = item.energy_cost;
-    console.log('pointsToSubtract:', pointsToSubtract)
+    let energyToSubtract = item.energy_cost;
+    let healthToSubtract = item.attack_damage;
 
     dispatch({
       type: 'SUBTRACT_ENERGY',
-      payload: pointsToSubtract
+      payload: energyToSubtract
     })
-    console.log('energyPoints:', energyPoints)
-
-    let result = characterEnergyPoints - item.energy_cost;
-    console.log('result:', result)
+    dispatch({
+      type: 'SUBTRACT_HIT_POINTS',
+      payload: healthToSubtract
+    })
   }
 
   return (
     <>
-      <div className="characterDiv">
-        <div>{energyPoints} EP</div>
-        <progress 
-          id="energyBar" 
-          value={energyPoints} 
-          max="200"
-        >
-        </progress>
+      <div className="encounterDiv">
+        <div id="energyDiv">
+          <label for="energyBar">Energy Points</label>
+          <progress 
+            id="energyBar" 
+            value={energyPoints}
+            max="200"
+          >
+          </progress>
+          <p>{energyPoints}</p>
+        </div>
         {/* use && operator to wait for the reducer to be populated */}
-        <p>{selectedCharacter[0] && selectedCharacter[0].name}</p>
         <div className={selectedCharacter[0] && selectedCharacter[0].idle_class}></div>
         <div id="backpackDiv">
           {backpack.map((item) => {
             return (
-              <button onClick={() => something(item)}>
+              <button onClick={() => handleItemClick(item)}>
                 <Backpack key={item.id} item={item}/>
               </button>
             )
           })}
+        </div>
+        <div id="healthDiv">
+          <label for="healthBar">Hit Points</label>
+          <progress 
+            id="healthBar" 
+            value={hitPoints}
+            max="100"
+          >
+          </progress>
+          <p>{hitPoints}</p>
         </div>
         <div className="golemIdle"></div>
       </div>

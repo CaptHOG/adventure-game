@@ -25,6 +25,7 @@ function CharacterPage() {
     })
   }, []);
 
+  // Add Character button
   const createCharacter = () => {
     dispatch({
       // pull from newCharacter reducer

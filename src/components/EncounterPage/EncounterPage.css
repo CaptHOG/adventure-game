@@ -1,7 +1,16 @@
+progress {
+  margin: 10px;
+  padding: 20px;
+}
 
+#energyDiv {
+  display: inline-grid;
+  text-align: center;
+}
 
-.characterDiv {
-  display: inline-block;
+#healthDiv {
+  display: inline-grid;
+  text-align: center;
 }
 
 #backpackDiv {
@@ -73,9 +82,9 @@
   position: absolute;
   animation: redDinoIdle 700ms steps(4) infinite;
 }
-@keyframes redDinoIdle {
+/* @keyframes redDinoIdle {
   100% { background-position: -768px 0; }
-}
+} */
 
 /* Kick */
 .redDinoKick {
