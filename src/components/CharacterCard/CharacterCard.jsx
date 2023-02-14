@@ -40,8 +40,8 @@ function CharacterCard({ character, nameInput }) {
 
   return (
     <>
-      <button>
-        <div className={isSelected ? 'imgDiv1' : 'imgDiv'} onClick={selectCharacter}>
+      <button className="characterDivButton" onClick={selectCharacter}>
+        <div className={isSelected ? 'imgDiv1' : 'imgDiv'}>
           <img 
             height="100px"
             width="100px"

@@ -1,68 +1,210 @@
-#characterDiv {
+
+
+.characterDiv {
   display: inline-block;
 }
-
-/* .itemCard {
-  margin: 10px;
-  border: 2px solid;
-  padding: 10px;
-} */
 
 #backpackDiv {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 60%;
-  left: 5%;
+  top: 65%;
+  left: 2%;
 }
 
-/* --- Green Dino --- */
+/* ---------- Start Animations ---------- */
+/* -------- Start Dinos -------- */
+/* ----- Blue Dino ----- */
+/* Idle */
+.blueDinoIdle {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/blue-dino-idle-scaled.png');
+  display: inline-flex;
+  left: 20%;
+  top: 44%;
+  position: absolute;
+  animation: blueDinoIdle 700ms steps(4) infinite;
+}
+/* @keyframes blueDinoIdle {
+  100% { background-position: -768px 0; }
+} */
+
+/* Kick */
+.blueDinoKick {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/blue-dino-kick-scaled.png');
+  display: inline-flex;
+  left: 20%;
+  top: 44%;
+  position: absolute;
+  animation: blueDinoKick 700ms steps(4) infinite;
+}
+@keyframes blueDinoKick {
+  100% { background-position: -768px 0; }
+}
+
+/* Hurt */
+.blueDinoHurt {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/blue-dino-hurt-scaled.png');
+  display: inline-flex;
+  left: 20%;
+  top: 44%;
+  position: absolute;
+  animation: blueDinoHurt 700ms steps(4) infinite;
+}
+@keyframes blueDinoHurt {
+  100% { background-position: -768px 0; }
+}
+/* End Blue Dino */
+
+/* ----- Red Dino ----- */
+/* Idle */
+.redDinoIdle {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/red-dino-idle-scaled.png');
+  display: inline-flex;
+  left: 20%;
+  top: 44%;
+  position: absolute;
+  animation: redDinoIdle 700ms steps(4) infinite;
+}
+@keyframes redDinoIdle {
+  100% { background-position: -768px 0; }
+}
+
+/* Kick */
+.redDinoKick {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/red-dino-kick-scaled.png');
+  display: inline-flex;
+  left: 20%;
+  top: 44%;
+  position: absolute;
+  animation: redDinoKick 700ms steps(4) infinite;
+}
+@keyframes redDinoKick {
+  100% { background-position: -768px 0; }
+}
+
+/* Hurt */
+.redDinoHurt {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/red-dino-hurt-scaled.png');
+  display: inline-flex;
+  left: 20%;
+  top: 44%;
+  position: absolute;
+  animation: redDinoHurt 700ms steps(4) infinite;
+}
+@keyframes redDinoHurt {
+  100% { background-position: -768px 0; }
+}
+/* End Red Dino */
+
+/* ----- Yellow Dino ----- */
+/* Idle */
+.yellowDinoIdle {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/yellow-dino-idle-scaled.png');
+  display: inline-flex;
+  left: 20%;
+  top: 44%;
+  position: absolute;
+  animation: yellowDinoIdle 700ms steps(4) infinite;
+}
+@keyframes yellowDinoIdle {
+  100% { background-position: -768px 0; }
+}
+
+/* Kick */
+.yellowDinoKick {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/yellow-dino-kick-scaled.png');
+  display: inline-flex;
+  left: 20%;
+  top: 44%;
+  position: absolute;
+  animation: yellowDinoKick 700ms steps(4) infinite;
+}
+@keyframes yellowDinoKick {
+  100% { background-position: -768px 0; }
+}
+
+/* Hurt */
+.yellowDinoHurt {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/yellow-dino-hurt-scaled.png');
+  display: inline-flex;
+  left: 20%;
+  top: 44%;
+  position: absolute;
+  animation: yellowDinoHurt 700ms steps(4) infinite;
+}
+@keyframes yellowDinoHurt {
+  100% { background-position: -768px 0; }
+}
+/* End Yellow Dino */
+
+/* ----- Green Dino ----- */
+/* Idle */
 .greenDinoIdle {
   width: 192px;
   height: 192px;
   background: url('/public/images/green-dino-idle-scaled.png');
   display: inline-flex;
   left: 20%;
-  top: 40%;
+  top: 44%;
   position: absolute;
-  animation: dinoIdle 700ms steps(4) infinite;
+  animation: greenDinoIdle 700ms steps(4) infinite;
 }
-@keyframes dinoIdle {
+@keyframes greenDinoIdle {
   100% { background-position: -768px 0; }
 }
 
+/* Kick */
 .greenDinoKick {
   width: 192px;
   height: 192px;
   background: url('/public/images/green-dino-kick-scaled.png');
   display: inline-flex;
   left: 20%;
-  top: 40%;
+  top: 44%;
   position: absolute;
-  /* transform: scale(-1); */
-  animation: dinoIdle 700ms steps(4) infinite;
+  animation: greenDinoKick 700ms steps(4) infinite;
 }
-@keyframes dinoIdle {
+@keyframes greenDinoKick {
   100% { background-position: -768px 0; }
 }
 
+/* Hurt */
 .greenDinoHurt {
   width: 192px;
   height: 192px;
   background: url('/public/images/green-dino-hurt-scaled.png');
   display: inline-flex;
   left: 20%;
-  top: 40%;
+  top: 44%;
   position: absolute;
-  /* transform: scale(-1); */
-  animation: dinoIdle 700ms steps(4) infinite;
+  animation: greenDinoHurt 700ms steps(4) infinite;
 }
-@keyframes dinoIdle {
+@keyframes greenDinoHurt {
   100% { background-position: -768px 0; }
 }
 /* End Green Dino */
+/* -------- End Dinos -------- */
 
-/* --- Golem --- */
+/* ----- Golem ----- */
+/* Idle */
 .golemIdle {
   width: 640px;
   height: 640px;
@@ -73,6 +215,7 @@
   position: absolute;
   animation: golemIdle 1000ms steps(6) infinite;
 }
-@keyframes golemIdle {
+/* @keyframes golemIdle {
   100% { background-position: 0 -3840px; }
-}
+} */
+/* ---------- End Animations ---------- */

@@ -21,44 +21,36 @@ function EncounterPage() {
 
   const something = (item) => {
 
-    let selectedCharacterId = selectedCharacter[0].id;
-    console.log('selectedCharacterId:', selectedCharacterId)
-
-    console.log('item.id', item.id)
+    console.log('item.id:', item.id)
     let characterEnergyPoints = selectedCharacter[0].energy_points
 
     let result = characterEnergyPoints - item.energy_cost;
     console.log('result:', result)
-
-    let dataToSend = {
-      selectedCharacterId,
-      result
-    }
-
-    dispatch({
-      type: 'SAGA/UPDATE_ENERGY_POINTS',
-      payload: dataToSend
-    })
   }
 
   return (
     <>
-      <div id="characterDiv">
-        <div className="ap-text">100 AP</div>
-        <progress id="ap-meter" value="100" max="100"></progress>
-        {/* <p>Energy Points: {energyPoints}</p> */}
+      <div className="characterDiv">
+        <div>{selectedCharacter[0] && selectedCharacter[0].energy_points} EP</div>
+        <progress 
+          id="energyBar" 
+          value={selectedCharacter[0] && selectedCharacter[0].energy_points} 
+          max="200"
+        >
+        </progress>
         {/* use && operator to wait for the reducer to be populated */}
         <p>{selectedCharacter[0] && selectedCharacter[0].name}</p>
-        {/* <p>Energy Points: {selectedCharacter[0].energy_points}</p> */}
         <div className={selectedCharacter[0] && selectedCharacter[0].idle_class}></div>
-        <div className="golemIdle"></div>
         <div id="backpackDiv">
           {backpack.map((item) => {
             return (
-              <button onClick={() => something(item)}><Backpack key={item.id} item={item}/></button>
+              <button onClick={() => something(item)}>
+                <Backpack key={item.id} item={item}/>
+              </button>
             )
           })}
         </div>
+        <div className="golemIdle"></div>
       </div>
     </>
   )
