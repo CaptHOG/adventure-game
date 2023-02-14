@@ -15,7 +15,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
   pool.query(sqlQuery)
     .then((dbRes) => {
       const selectedCharacter = dbRes.rows;
-      console.log('selectedCharacter dbRes.rows:', dbRes.rows)
+      // console.log('selectedCharacter dbRes.rows:', dbRes.rows)
       // this gets sent to the client based on sqlQuery
       res.send(selectedCharacter);
     })

@@ -18,15 +18,17 @@ function ItemCard({ item }) {
 
   return (
     <>
-      <div className="itemCard" onClick={addToBackpack}>
-        <p>{item.name}</p>
-        <img 
-          height="100px"
-          width="100px"
-          src={item.image_url}
-        />
-        <p>{item.description}!</p>
-      </div>
+      <button>
+        <div className="itemCard" onClick={addToBackpack}>
+          <p>{item.name}</p>
+          <img 
+            height="100px"
+            width="100px"
+            src={item.image_url}
+          />
+          <p>{item.description}!</p>
+        </div>
+      </button>
     </>
   )
 }

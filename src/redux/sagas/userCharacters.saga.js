@@ -4,13 +4,14 @@ import { put, takeLatest } from 'redux-saga/effects';
 
 // POST
 function* createCharacter(action) {
-  // console.log('createCharacter action.payload:', action.payload);
+  const characterToAdd = action.payload;
+  console.log('createCharacter characterToAdd:', characterToAdd);
   // Send new character (action.payload) to server
   // (POST /userCharacters)
   try {
-    const newCharacter = action.payload;
-    const response = yield axios.post('/userCharacters', action.payload)
-    console.log(response.data);
+    const response = yield axios.post('/userCharacters', characterToAdd)
+    // response.data is "Created" from the server
+    console.log('createCharacter saga response.data:', response.data);
 
     yield put({ type: 'SAGA/FETCH_USER_CHARACTERS' })
   } catch (error) {

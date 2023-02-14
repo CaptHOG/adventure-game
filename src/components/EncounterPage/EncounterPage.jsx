@@ -55,9 +55,10 @@ function EncounterPage() {
         <div className="ap-text">100 AP</div>
         <progress id="ap-meter" value="100" max="100"></progress>
         {/* <p>Energy Points: {energyPoints}</p> */}
+        {/* use && operator to wait for the reducer to be populated */}
         <p>{selectedCharacter[0] && selectedCharacter[0].name}</p>
         {/* <p>Energy Points: {selectedCharacter[0].energy_points}</p> */}
-        <div className="greenDinoIdle"></div>
+        <div className={selectedCharacter[0] && selectedCharacter[0].idle_class}></div>
         <div id="backpackDiv">
           {backpack.map((item) => {
             return (

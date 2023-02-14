@@ -27,18 +27,30 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 
 // POST /userCharacters
 router.post('/', rejectUnauthenticated, (req, res) => {
-  // console.log('req.body:', req.body);
+  // console.log('/userCharacters req.body:', req.body);
   const newCharacter = req.body;
 
   const queryText = `
-    INSERT INTO "user_characters" ("name", "image_url", "energy_points", "user_id")
+    INSERT INTO "user_characters" (
+      "name", 
+      "energy_points", 
+      "image_url", 
+      "idle_class", 
+      "kick_class", 
+      "hurt_class",
+      "user_id"
+    )
       VALUES
-      ($1, $2, $3, $4);
+      ($1, $2, $3, $4, $5, $6, $7)
+      ;
   `;
   const queryValues = [
     newCharacter.name,
-    newCharacter.image_url,
     newCharacter.energy_points,
+    newCharacter.image_url,
+    newCharacter.idle_class,
+    newCharacter.kick_class,
+    newCharacter.hurt_class,
     newCharacter.user_id
   ]
 

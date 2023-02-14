@@ -1,3 +1,7 @@
+#addCharacterButton {
+  margin: 10px;
+}
+
 table {
   outline: 1px solid black;
   margin-left: auto;
@@ -33,6 +37,20 @@ form {
   padding: 10px;
 }
 
+/* .imgDivButton:hover {
+  margin: 10px;
+  border: 5px solid;
+  padding: 10px;
+  background: chartreuse;
+} */
+
+.imgDiv1, .imgDiv2, .imgDiv3, .imgDiv4 {
+  margin: 10px;
+  border: 5px solid;
+  padding: 10px;
+  background: chartreuse;
+}
+
 .characterRow {
   background-color: rgb(193, 214, 255);
 }
@@ -40,3 +58,36 @@ form {
 .characterRowChangeColor {
   background-color: rgb(206, 255, 80);
 }
+
+
+/* import React, { useState } from 'react';
+
+function Component() {
+  const [selected, setSelected] = useState(null);
+  const [items, setItems] = useState([
+    { id: 1, name: 'Item 1' },
+    { id: 2, name: 'Item 2' },
+    { id: 3, name: 'Item 3' }
+  ]);
+
+  const handleClick = (id) => {
+    setSelected(id);
+  };
+
+  return (
+    <div>
+      {items.map((item) => (
+        <div
+          key={item.id}
+          className={selected === item.id ? 'selected' : ''}
+          onClick={() => handleClick(item.id)}
+        >
+          {item.name}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default Component;
+ */

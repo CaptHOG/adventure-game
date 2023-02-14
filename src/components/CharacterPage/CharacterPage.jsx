@@ -23,21 +23,18 @@ function CharacterPage() {
     dispatch({
       type: 'SAGA/FETCH_USER_CHARACTERS'
     })
-    dispatch({
-      type: 'SAGA/FETCH_SELECTED_CHARACTER'
-    })
   }, []);
 
   const createCharacter = () => {
-    console.log('saga?')
-
     dispatch({
       // pull from newCharacter reducer
       type: 'SAGA/CREATE_CHARACTER',
       payload: newCharacter
     })
+    setNameInput('');
   }
 
+  // Continue button
   const goToItemsPage = (event) => {
     event.preventDefault();
 
@@ -73,11 +70,15 @@ function CharacterPage() {
         <div id="charactersDiv">
           {characters.map((character) => {
             return (
-              <CharacterCard key={character.id} character={character} nameInput={nameInput}/>
+              <CharacterCard 
+                key={character.id} 
+                character={character} 
+                nameInput={nameInput} 
+              />
             )
           })}
         </div>
-        <button onClick={createCharacter}>Add Character</button>
+        <button id="addCharacterButton" onClick={createCharacter}>Add Character</button>
       </form>
       <table>
         <thead>

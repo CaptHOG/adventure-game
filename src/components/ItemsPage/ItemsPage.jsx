@@ -19,10 +19,16 @@ function ItemsPage() {
 
   useEffect(() => {
     dispatch({
+      type: 'RESET_BACKPACK'
+    })
+    dispatch({
       type: 'SAGA/FETCH_ITEMS'
     })
     dispatch({
       type: 'SAGA/FETCH_SELECTED_CHARACTER'
+    })
+    dispatch({
+      type: 'SAGA/FETCH_BACKPACK'
     })
   }, [])
 
