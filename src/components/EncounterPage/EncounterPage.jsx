@@ -8,7 +8,7 @@ function EncounterPage() {
   const dispatch = useDispatch();
   const selectedCharacter = useSelector((store) => store.selectedCharacter);
   const backpack = useSelector((store) => store.backpack);
-  // const energyPoints = useSelector((store) => store.energyPoints);
+  const energyPoints = useSelector((store) => store.energyPoints);
 
   useEffect(() => {
     dispatch({
@@ -20,9 +20,17 @@ function EncounterPage() {
   }, [])
 
   const something = (item) => {
-
     console.log('item.id:', item.id)
     let characterEnergyPoints = selectedCharacter[0].energy_points
+
+    let pointsToSubtract = item.energy_cost;
+    console.log('pointsToSubtract:', pointsToSubtract)
+
+    dispatch({
+      type: 'SUBTRACT_ENERGY',
+      payload: pointsToSubtract
+    })
+    console.log('energyPoints:', energyPoints)
 
     let result = characterEnergyPoints - item.energy_cost;
     console.log('result:', result)
@@ -31,10 +39,10 @@ function EncounterPage() {
   return (
     <>
       <div className="characterDiv">
-        <div>{selectedCharacter[0] && selectedCharacter[0].energy_points} EP</div>
+        <div>{energyPoints} EP</div>
         <progress 
           id="energyBar" 
-          value={selectedCharacter[0] && selectedCharacter[0].energy_points} 
+          value={energyPoints} 
           max="200"
         >
         </progress>
