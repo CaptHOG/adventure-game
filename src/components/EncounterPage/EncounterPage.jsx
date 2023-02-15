@@ -24,6 +24,12 @@ function EncounterPage() {
   const kick = () => {
     setDinoKick(true);
     setTimeout(idle, 600);
+
+    if (energyPoints <= 0) {
+      alert('GAME OVER')
+    } else if (hitPoints <= 0) {
+      alert('YOU WIN!')
+    }
   }
 
   const idle = () => {
@@ -35,11 +41,11 @@ function EncounterPage() {
 
     kick();
 
-    if (energyPoints <= 0) {
-      alert('GAME OVER')
-    } else if (hitPoints <= 0) {
-      alert('YOU WIN!')
-    }
+    // if (energyPoints <= 0) {
+    //   alert('GAME OVER')
+    // } else if (hitPoints <= 0) {
+    //   alert('YOU WIN!')
+    // }
 
     let energyToSubtract = item.energy_cost;
     let healthToSubtract = item.attack_damage;
@@ -128,7 +134,7 @@ function EncounterPage() {
             </progress>
             <p>{hitPoints}</p>
           </div> */}
-          <div className="golemIdle"></div>
+          <div className="golemHurt"></div>
         </div>
       </>
     )

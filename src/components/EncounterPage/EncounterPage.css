@@ -228,4 +228,18 @@ progress {
 @keyframes golemIdle {
   100% { background-position: 0 -3840px; }
 }
+
+.golemHurt {
+  width: 640px;
+  height: 640px;
+  background: url('/public/images/golem-hurt-scaled.png');
+  display: inline-flex;
+  left: 55%;
+  top: 10%;
+  position: absolute;
+  animation: golemHurt 1000ms steps(4) 1;
+}
+@keyframes golemHurt {
+  100% { background-position: 0 -2560px; }
+}
 /* ---------- End Animations ---------- */
