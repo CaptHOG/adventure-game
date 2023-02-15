@@ -13,7 +13,6 @@ router.get('/', rejectUnauthenticated, (req, res) => {
   pool.query(sqlQuery)
     .then((dbRes) => {
       const backpack = dbRes.rows;
-      // console.log('dbRes.rows:', backpack);
       // this gets sent to the client based on sqlQuery
       res.send(backpack);
     })

@@ -11,6 +11,7 @@ progress {
 #healthDiv {
   display: inline-grid;
   text-align: center;
+  float: right;
 }
 
 #backpackDiv {
@@ -35,9 +36,9 @@ progress {
   position: absolute;
   animation: blueDinoIdle 700ms steps(4) infinite;
 }
-/* @keyframes blueDinoIdle {
+@keyframes blueDinoIdle {
   100% { background-position: -768px 0; }
-} */
+}
 
 /* Kick */
 .blueDinoKick {
@@ -48,7 +49,7 @@ progress {
   left: 20%;
   top: 44%;
   position: absolute;
-  animation: blueDinoKick 700ms steps(4) infinite;
+  animation: blueDinoKick 600ms steps(4) 1;
 }
 @keyframes blueDinoKick {
   100% { background-position: -768px 0; }
@@ -82,9 +83,9 @@ progress {
   position: absolute;
   animation: redDinoIdle 700ms steps(4) infinite;
 }
-/* @keyframes redDinoIdle {
+@keyframes redDinoIdle {
   100% { background-position: -768px 0; }
-} */
+}
 
 /* Kick */
 .redDinoKick {
@@ -95,7 +96,7 @@ progress {
   left: 20%;
   top: 44%;
   position: absolute;
-  animation: redDinoKick 700ms steps(4) infinite;
+  animation: redDinoKick 600ms steps(4) 1;
 }
 @keyframes redDinoKick {
   100% { background-position: -768px 0; }
@@ -142,7 +143,7 @@ progress {
   left: 20%;
   top: 44%;
   position: absolute;
-  animation: yellowDinoKick 700ms steps(4) infinite;
+  animation: yellowDinoKick 600ms steps(4) 1;
 }
 @keyframes yellowDinoKick {
   100% { background-position: -768px 0; }
@@ -189,7 +190,7 @@ progress {
   left: 20%;
   top: 44%;
   position: absolute;
-  animation: greenDinoKick 700ms steps(4) infinite;
+  animation: greenDinoKick 600ms steps(4) 1;
 }
 @keyframes greenDinoKick {
   100% { background-position: -768px 0; }
@@ -224,7 +225,7 @@ progress {
   position: absolute;
   animation: golemIdle 1000ms steps(6) infinite;
 }
-/* @keyframes golemIdle {
+@keyframes golemIdle {
   100% { background-position: 0 -3840px; }
-} */
+}
 /* ---------- End Animations ---------- */
