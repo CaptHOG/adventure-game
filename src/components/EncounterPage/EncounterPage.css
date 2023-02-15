@@ -115,7 +115,7 @@ progress {
   left: 20%;
   top: 44%;
   position: absolute;
-  animation: redDinoHurt 700ms steps(4) infinite;
+  animation: redDinoHurt 800ms steps(4) 1;
 }
 @keyframes redDinoHurt {
   100% { background-position: -768px 0; }
@@ -162,7 +162,7 @@ progress {
   left: 20%;
   top: 44%;
   position: absolute;
-  animation: yellowDinoHurt 700ms steps(4) infinite;
+  animation: yellowDinoHurt 800ms steps(4) 1;
 }
 @keyframes yellowDinoHurt {
   100% { background-position: -768px 0; }
@@ -209,7 +209,7 @@ progress {
   left: 20%;
   top: 44%;
   position: absolute;
-  animation: greenDinoHurt 700ms steps(4) infinite;
+  animation: greenDinoHurt 800ms steps(4) 1;
 }
 @keyframes greenDinoHurt {
   100% { background-position: -768px 0; }
@@ -307,5 +307,20 @@ progress {
 }
 @keyframes guardianAttack {
   100% { background-position: 0 -2880px; }
+}
+
+.guardianDeath {
+  width: 360px;
+  height: 360px;
+  background: url('/public/images/guardian-death-scaled-300.png');
+  display: inline-flex;
+  left: 60%;
+  top: 29%;
+  position: absolute;
+  transform: scale(1.5);
+  animation: guardianDeath 1200ms steps(10) 1;
+}
+@keyframes guardianDeath {
+  100% { background-position: 0 -3600px; }
 }
 /* ---------- End Animations ---------- */
