@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(190, 158, 106);
+}
+
 progress {
   margin: 10px;
   padding: 20px;
@@ -64,7 +68,7 @@ progress {
   left: 20%;
   top: 44%;
   position: absolute;
-  animation: blueDinoHurt 700ms steps(4) infinite;
+  animation: blueDinoHurt 800ms steps(4) 1;
 }
 @keyframes blueDinoHurt {
   100% { background-position: -768px 0; }
@@ -215,7 +219,7 @@ progress {
 
 /* ----- Golem ----- */
 /* Idle */
-.golemIdle {
+/* .golemIdle {
   width: 640px;
   height: 640px;
   background: url('/public/images/golem-idle-scaled.png');
@@ -241,5 +245,67 @@ progress {
 }
 @keyframes golemHurt {
   100% { background-position: 0 -2560px; }
+}
+
+.golemAttack {
+  width: 480px;
+  height: 480px;
+  background: url('/public/images/golem-attack-scaled-480.png');
+  display: inline-flex;
+  left: 55%;
+  top: 10%;
+  position: absolute;
+  animation: golemAttack 1000ms steps(8) 1;
+}
+@keyframes golemAttack {
+  100% { background-position: 0 -3840px; }
+} */
+
+/* ----- Guardian ----- */
+/* Idle */
+.guardianIdle {
+  width: 360px;
+  height: 360px;
+  background: url('/public/images/guardian-idle-scaled-300.png');
+  display: inline-flex;
+  left: 60%;
+  top: 29%;
+  position: absolute;
+  transform: scale(1.5);
+  animation: guardianIdle 900ms steps(6) infinite;
+}
+@keyframes guardianIdle {
+  100% { background-position: 0 -2160px; }
+}
+
+/* Hurt */
+.guardianHurt {
+  width: 360px;
+  height: 360px;
+  background: url('/public/images/guardian-hurt-scaled-300.png');
+  display: inline-flex;
+  left: 60%;
+  top: 29%;
+  position: absolute;
+  transform: scale(1.5);
+  animation: guardianHurt 1000ms steps(4) 1;
+}
+@keyframes guardianHurt {
+  100% { background-position: 0 -1440px; }
+}
+
+.guardianAttack {
+  width: 360px;
+  height: 360px;
+  background: url('/public/images/guardian-attack2-scaled-300.png');
+  display: inline-flex;
+  left: 60%;
+  top: 29%;
+  position: absolute;
+  transform: scale(1.5);
+  animation: guardianAttack 700ms steps(8) 1;
+}
+@keyframes guardianAttack {
+  100% { background-position: 0 -2880px; }
 }
 /* ---------- End Animations ---------- */

@@ -11,6 +11,7 @@ function EncounterPage() {
   const energyPoints = useSelector((store) => store.energyPoints);
   const hitPoints = useSelector((store) => store.hitPoints);
   const [dinoKick, setDinoKick] = useState(false);
+  const [isAttacking, setIsAttacking] = useState(false);
 
   useEffect(() => {
     dispatch({
@@ -23,29 +24,24 @@ function EncounterPage() {
 
   const kick = () => {
     setDinoKick(true);
-    setTimeout(idle, 600);
-
-    if (energyPoints <= 0) {
-      alert('GAME OVER')
-    } else if (hitPoints <= 0) {
-      alert('YOU WIN!')
-    }
+    setTimeout(enemyAttack, 600);
   }
 
-  const idle = () => {
+  const enemyAttack = () => {
     setDinoKick(false);
+    setIsAttacking(true);
+    setTimeout(returnToIdle, 900);
+  }
+
+  const returnToIdle = () => {
+    setDinoKick(false);
+    setIsAttacking(false);
   }
 
   // handle item click
   const handleItemClick = (item) => {
 
     kick();
-
-    // if (energyPoints <= 0) {
-    //   alert('GAME OVER')
-    // } else if (hitPoints <= 0) {
-    //   alert('YOU WIN!')
-    // }
 
     let energyToSubtract = item.energy_cost;
     let healthToSubtract = item.attack_damage;
@@ -60,7 +56,8 @@ function EncounterPage() {
     })
   }
 
-  if (!dinoKick) {
+  // DEFAULT
+  if (!dinoKick && !isAttacking) {
     return (
       <>
         <div className="encounterDiv">
@@ -95,11 +92,13 @@ function EncounterPage() {
             </progress>
             <p>{hitPoints}</p>
           </div>
-          <div className="golemIdle"></div>
+          <div className="guardianIdle"></div>
         </div>
       </>
     )
-  } else {
+
+    // CHARACTER ACTION
+  } else if (dinoKick) {
     return (
       <>
         <div className="encounterDiv">
@@ -134,7 +133,48 @@ function EncounterPage() {
             </progress>
             <p>{hitPoints}</p>
           </div> */}
-          <div className="golemHurt"></div>
+          <div className="guardianHurt"></div>
+        </div>
+      </>
+    )
+
+    // ENEMY ACTION
+  } else if (isAttacking) {
+    return (
+      <>
+        <div className="encounterDiv">
+          {/* <div id="energyDiv">
+            <label for="energyBar">Energy Points</label>
+            <progress 
+              id="energyBar" 
+              value={energyPoints}
+              max="200"
+            >
+            </progress>
+            <p>{energyPoints}</p>
+          </div> */}
+          {/* use && operator to wait for the reducer to be populated */}
+          <div className={selectedCharacter[0] && selectedCharacter[0].hurt_class}></div>
+          {/* <div id="backpackDiv">
+            {backpack.map((item) => {
+              return (
+                <button onClick={() => handleItemClick(item)}>
+                  <Backpack key={item.id} item={item}/>
+                </button>
+              )
+            })}
+          </div> */}
+          {/* <div id="healthDiv">
+            <label for="healthBar">Hit Points</label>
+            <progress 
+              id="healthBar" 
+              value={hitPoints}
+              max="100"
+            >
+            </progress>
+            <p>{hitPoints}</p>
+          </div> */}
+          <div className="guardianAttack"></div>
         </div>
       </>
     )
