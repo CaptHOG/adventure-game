@@ -19,6 +19,11 @@
   margin: 10px;
 }
 
+thead {
+  color: white;
+  background-color: black;
+}
+
 table {
   outline: 1px solid black;
   margin-left: auto;

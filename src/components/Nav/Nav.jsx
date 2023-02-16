@@ -36,6 +36,10 @@ function Nav() {
               Items
             </Link> */}
 
+            <Link className="navLink" to="/walking">
+              Walking
+            </Link>
+
             <Link className="navLink" to="/encounter">
               Encounter
             </Link>

@@ -42,6 +42,21 @@
   100% { background-position: -1152px 0; }
 }
 
+/* Yellow Dino */
+.yellowDinoWalk {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/yellow-dino-walk-scaled.png');
+  display: inline-flex;
+  left: 20%;
+  top: 44%;
+  position: absolute;
+  animation: yellowDinoWalk 600ms steps(6) infinite;
+}
+@keyframes yellowDinoWalk {
+  100% { background-position: -1152px 0; }
+}
+
 /* Green Dino */
 .greenDinoWalk {
   width: 192px;
