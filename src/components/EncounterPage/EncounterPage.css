@@ -333,9 +333,11 @@ progress {
   top: 29%;
   position: absolute;
   transform: scale(1.5);
-  animation: guardianDeath 1200ms steps(10) 1;
+  animation: guardianDeath 1000ms steps(9) 1;
+  animation-fill-mode: forwards;
 }
 @keyframes guardianDeath {
-  100% { background-position: 0 -3600px; }
+  /* 99% { background-position: 0 -3600px; } */
+  100% { background-position: 0 -3240px; }
 }
 /* ---------- End Animations ---------- */

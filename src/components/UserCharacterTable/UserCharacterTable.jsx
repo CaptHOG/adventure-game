@@ -39,8 +39,12 @@ function UserCharacterTable({ userCharacter }) {
     let selectedCharacter = {
       id: userCharacter.id,
       name: userCharacter.name,
-      image_url: userCharacter.image_url,
       energy_points: userCharacter.energy_points,
+      image_url: userCharacter.image_url,
+      idle_class: userCharacter.idle_class,
+      kick_class: userCharacter.kick_class,
+      hurt_class: userCharacter.hurt_class,
+      walk_class: userCharacter.walk_class,
       user_id: userCharacter.user_id
     }
     // console.log('selectedCharacter from UserCharacterTable:', selectedCharacter);

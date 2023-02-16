@@ -37,7 +37,7 @@ function CharacterPage() {
 
   // Continue button
   const goToWalkingPage = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
 
     console.log('selectedCharacter from CharacterPage:', selectedCharacter)
 

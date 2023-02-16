@@ -13,6 +13,7 @@ function EncounterPage() {
   const [dinoKick, setDinoKick] = useState(false);
   const [isAttacking, setIsAttacking] = useState(false);
   const [winGame, setWinGame] = useState(false);
+  const [isDown, setIsDown] = useState(false);
 
   useEffect(() => {
     dispatch({
@@ -50,8 +51,17 @@ function EncounterPage() {
         type: 'SUBTRACT_ENERGY_DAMAGE'
       })
 
-      setTimeout(returnToIdle, 900);
+      if (winGame) {
+        setTimeout(guardianDown, 900);
+      } else {
+        setTimeout(returnToIdle, 900);
+      }
     }
+  }
+
+  const guardianDown = () => {
+    setWinGame(true);
+    setIsDown(true);
   }
 
   const returnToIdle = () => {
@@ -107,7 +117,7 @@ function EncounterPage() {
               )
             })}
           </div>
-          <div id="healthDiv">
+          {/* <div id="healthDiv">
             <label for="healthBar">Hit Points</label>
             <progress 
               id="healthBar" 
@@ -116,7 +126,7 @@ function EncounterPage() {
             >
             </progress>
             <p>{hitPoints}</p>
-          </div>
+          </div> */}
           <div className='guardianIdle'></div>
           <div id="textBoxDiv">
             <p id="textBoxText">Oh no! You've found a baddy on the way to your friend's! Defeat them to continue on.</p>
@@ -151,7 +161,7 @@ function EncounterPage() {
               )
             })}
           </div> */}
-          <div id="healthDiv">
+          {/* <div id="healthDiv">
             <label for="healthBar">Hit Points</label>
             <progress 
               id="healthBar" 
@@ -160,8 +170,11 @@ function EncounterPage() {
             >
             </progress>
             <p>{hitPoints}</p>
-          </div>
+          </div> */}
           <div className="guardianHurt"></div>
+          <div id="textBoxDiv">
+            <p id="textBoxText">Take that you bully!</p>
+          </div>
         </div>
       </>
     )
@@ -192,7 +205,7 @@ function EncounterPage() {
               )
             })}
           </div> */}
-          <div id="healthDiv">
+          {/* <div id="healthDiv">
             <label for="healthBar">Hit Points</label>
             <progress 
               id="healthBar" 
@@ -201,8 +214,11 @@ function EncounterPage() {
             >
             </progress>
             <p>{hitPoints}</p>
-          </div>
+          </div> */}
           <div className="guardianAttack"></div>
+          <div id="textBoxDiv">
+            <p id="textBoxText">Take that you bully!</p>
+          </div>
         </div>
       </>
     )
@@ -233,7 +249,7 @@ function EncounterPage() {
               )
             })}
           </div> */}
-          <div id="healthDiv">
+          {/* <div id="healthDiv">
             <label for="healthBar">Hit Points</label>
             <progress 
               id="healthBar" 
@@ -242,8 +258,11 @@ function EncounterPage() {
             >
             </progress>
             <p>{hitPoints}</p>
-          </div>
+          </div> */}
           <div className="guardianDeath"></div>
+          <div id="textBoxDiv">
+            <p id="textBoxText">you win</p>
+          </div>
         </div>
       </>
     )
