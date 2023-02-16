@@ -55,3 +55,9 @@ form {
 .characterRowChangeColor {
   background-color: rgb(206, 255, 80);
 }
+
+#goToWalkingButton {
+  font-size: xxx-large;
+  padding: 20px;
+  margin: 40px;
+}

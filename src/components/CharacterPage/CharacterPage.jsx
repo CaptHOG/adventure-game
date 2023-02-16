@@ -36,7 +36,7 @@ function CharacterPage() {
   }
 
   // Continue button
-  const goToItemsPage = (event) => {
+  const goToWalkingPage = (event) => {
     event.preventDefault();
 
     console.log('selectedCharacter from CharacterPage:', selectedCharacter)
@@ -55,19 +55,21 @@ function CharacterPage() {
       })
     }
     
-    history.push('/items');
+    history.push('/walking');
   }
 
   return (
     <>
       <h2>Create Character</h2>
       <form>
+        <h4>Name your character</h4>
         <input
           placeholder="Character Name"
           type="text"
           value={nameInput}
           onChange={(event) => setNameInput(event.target.value)}
         />
+        <h4>Choose your dino</h4>
         <div id="charactersDiv">
           {characters.map((character) => {
             return (
@@ -79,7 +81,7 @@ function CharacterPage() {
             )
           })}
         </div>
-        <button id="addCharacterButton" onClick={createCharacter}>Add Character</button>
+        <button id="addCharacterButton" onClick={createCharacter}>Save Character</button>
       </form>
       <table>
         <thead>
@@ -99,7 +101,8 @@ function CharacterPage() {
           })}
         </tbody>
       </table>
-      <button onClick={goToItemsPage}>Continue</button>
+      <h3>Select a character and continue on!</h3>
+      <button id="goToWalkingButton" onClick={goToWalkingPage}>Continue</button>
     </>
   )
 }   

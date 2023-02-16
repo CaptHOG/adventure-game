@@ -10,6 +10,7 @@ progress {
 #energyDiv {
   display: inline-grid;
   text-align: center;
+  float: left;
 }
 
 #healthDiv {
@@ -24,6 +25,20 @@ progress {
   position: absolute;
   top: 65%;
   left: 2%;
+}
+
+#textBoxDiv {
+  background-color: black;
+  width: 500px;
+  height: auto;
+  border: 5px solid white;
+  position: absolute;
+  left: 34%;
+  top: 70%;
+}
+
+#textBoxText {
+  color: white;
 }
 
 /* ---------- Start Animations ---------- */

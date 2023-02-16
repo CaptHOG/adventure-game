@@ -4,8 +4,15 @@ body,
   height: 100%;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+button {
+  font-family: 'Silkscreen', monospace;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Silkscreen', monospace;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   margin: 0px;
 }
 

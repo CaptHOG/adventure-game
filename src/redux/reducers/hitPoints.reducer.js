@@ -1,8 +1,9 @@
 const hitPointsReducer = (state = 100, action) => {
   if (action.type === 'SUBTRACT_HIT_POINTS') {
-    let newAmount = state - 49;
+    let newAmount = state - action.payload;
     if (newAmount <= 0) {
       newAmount = 0;
+      alert('YOU WIN!')
     }
     return newAmount;
   } else {

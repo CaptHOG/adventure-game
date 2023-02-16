@@ -38,10 +38,11 @@ router.post('/', rejectUnauthenticated, (req, res) => {
       "idle_class", 
       "kick_class", 
       "hurt_class",
+      "walk_class",
       "user_id"
     )
       VALUES
-      ($1, $2, $3, $4, $5, $6, $7)
+      ($1, $2, $3, $4, $5, $6, $7, $8)
       ;
   `;
   const queryValues = [
@@ -51,6 +52,7 @@ router.post('/', rejectUnauthenticated, (req, res) => {
     newCharacter.idle_class,
     newCharacter.kick_class,
     newCharacter.hurt_class,
+    newCharacter.walk_class,
     newCharacter.user_id
   ]
 

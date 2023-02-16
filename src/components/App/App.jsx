@@ -25,6 +25,7 @@ import './App.css';
 import CharacterPage from '../CharacterPage/CharacterPage';
 import ItemsPage from '../ItemsPage/ItemsPage';
 import EncounterPage from '../EncounterPage/EncounterPage';
+import WalkingPage from '../WalkingPage/WalkingPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -77,11 +78,15 @@ function App() {
           </ProtectedRoute>
 
           <ProtectedRoute exact path="/items">
-            <ItemsPage />
+            {/* <ItemsPage /> */}
           </ProtectedRoute>
 
           <ProtectedRoute exact path="/encounter">
             <EncounterPage />
+          </ProtectedRoute>
+
+          <ProtectedRoute exact path="/walking">
+            <WalkingPage />
           </ProtectedRoute>
 
           <Route

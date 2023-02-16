@@ -32,9 +32,9 @@ function Nav() {
               Characters
             </Link>
 
-            <Link className="navLink" to="/items">
+            {/* <Link className="navLink" to="/items">
               Items
-            </Link>
+            </Link> */}
 
             <Link className="navLink" to="/encounter">
               Encounter

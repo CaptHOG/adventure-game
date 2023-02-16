@@ -28,15 +28,30 @@ function EncounterPage() {
     setTimeout(enemyAttack, 600);
   }
 
-  const enemyAttack = () => {
+  const deathKick = () => {
+    setDinoKick(true);
+    setTimeout(enemyDeath, 600);
+  }
+
+  const enemyDeath = () => {
+    setIsAttacking(false);
     setDinoKick(false);
-    setIsAttacking(true);
+    setWinGame(true);
+  }
 
-    dispatch({
-      type: 'SUBTRACT_ENERGY_DAMAGE'
-    })
+  const enemyAttack = () => {
+    if (hitPoints <= 0) {
+      enemyDeath();
+    } else {
+      setDinoKick(false);
+      setIsAttacking(true);
 
-    setTimeout(returnToIdle, 900);
+      dispatch({
+        type: 'SUBTRACT_ENERGY_DAMAGE'
+      })
+
+      setTimeout(returnToIdle, 900);
+    }
   }
 
   const returnToIdle = () => {
@@ -58,11 +73,16 @@ function EncounterPage() {
       payload: healthToSubtract
     })
 
-    kick();
+
+    if (hitPoints <= 0) {
+      deathKick();
+    } else {
+      kick();
+    }
   }
 
   // DEFAULT (IDLE)
-  if (!dinoKick && !isAttacking) {
+  if (!dinoKick && !isAttacking && !winGame) {
     return (
       <>
         <div className="encounterDiv">
@@ -97,7 +117,10 @@ function EncounterPage() {
             </progress>
             <p>{hitPoints}</p>
           </div>
-          <div className="guardianIdle"></div>
+          <div className='guardianIdle'></div>
+          <div id="textBoxDiv">
+            <p id="textBoxText">Oh no! You've found a baddy on the way to your friend's! Defeat them to continue on.</p>
+          </div>
         </div>
       </>
     )

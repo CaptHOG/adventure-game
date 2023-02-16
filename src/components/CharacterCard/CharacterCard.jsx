@@ -27,6 +27,7 @@ function CharacterCard({ character, nameInput }) {
       idle_class: character.idle_class,
       kick_class: character.kick_class,
       hurt_class: character.hurt_class,
+      walk_class: character.walk_class,
       user_id: user.id
     }
     // console.log('sendCharacter newCharacter:', newCharacter)

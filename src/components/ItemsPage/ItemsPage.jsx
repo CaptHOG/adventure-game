@@ -18,9 +18,9 @@ function ItemsPage() {
   // console.log('selectedCharacter:', selectedCharacter);
 
   useEffect(() => {
-    dispatch({
-      type: 'RESET_BACKPACK'
-    })
+    // dispatch({
+    //   type: 'RESET_BACKPACK'
+    // })
     dispatch({
       type: 'SAGA/FETCH_ITEMS'
     })
@@ -40,7 +40,7 @@ function ItemsPage() {
 
     console.log('backpack:', backpack)
 
-    history.push('/encounter');
+    // history.push('/encounter');
   }
 
   return (
