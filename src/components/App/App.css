@@ -129,3 +129,35 @@ input {
   margin: 5px;
   margin-bottom: 10px;
 }
+
+#technologiesList {
+  list-style-type: none;
+}
+
+#technologiesDiv {
+  float: left;
+  position: absolute;
+  left: 25%;
+  top: 20%
+}
+
+#creditsList {
+  list-style-type: none;
+}
+
+#creditsDiv {
+  float: right;
+  position: absolute;
+  right: 20%;
+  top: 20%;
+}
+
+#thankYouDiv {
+  position: absolute;
+  left: 41%;
+  top: 40%;
+}
+
+#thankYouList {
+  list-style-type: none;
+}

@@ -94,7 +94,7 @@ function EncounterPage() {
   }
 
   const goToRunningPage = () => {
-    history.push('/running');
+    history.push('/friend');
   }
 
   // DEFAULT (IDLE)
@@ -179,7 +179,7 @@ function EncounterPage() {
           </div> */}
           <div className="guardianHurt"></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">Take that you bully!</p>
+            <p id="textBoxText">You: "Take that you bully!"</p>
           </div>
         </div>
       </>
@@ -223,7 +223,7 @@ function EncounterPage() {
           </div> */}
           <div className="guardianAttack"></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">Take that you bully!</p>
+            <p id="textBoxText">You: "Take that you bully!"</p>
           </div>
         </div>
       </>

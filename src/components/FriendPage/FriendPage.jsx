@@ -1,11 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import './FriendPage.css';
+import { useHistory } from "react-router-dom";
 
 
 function FriendPage() {
   const selectedCharacter = useSelector((store) => store.selectedCharacter);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   useEffect(() => {
     dispatch({
@@ -14,7 +16,7 @@ function FriendPage() {
   }, [])
 
   const goToAboutPage = () => {
-    
+    history.push('/about');
   }
 
   return (
