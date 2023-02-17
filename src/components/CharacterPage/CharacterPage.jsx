@@ -70,7 +70,7 @@ function CharacterPage() {
           value={nameInput}
           onChange={(event) => setNameInput(event.target.value)}
         />
-        <h4>Click a dino!</h4>
+        <h4>Click a dino then save your character!</h4>
         <div id="charactersDiv">
           {characters.map((character) => {
             return (

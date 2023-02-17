@@ -25,6 +25,17 @@ progress {
   position: absolute;
   top: 65%;
   left: 2%;
+  background-color: oldlace;
+  border-radius: 25%;
+}
+
+.itemCard {
+  background-color: oldlace;
+  border-radius: 25%;
+}
+
+.itemCardButton {
+  background-color: oldlace;
 }
 
 #textBoxDiv {

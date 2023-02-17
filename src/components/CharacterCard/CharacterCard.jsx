@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 function CharacterCard({ character, nameInput }) {
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
-  const [imgDiv, setImgDiv] = useState('imgDiv');
+  // const [imgDiv, setImgDiv] = useState('imgDiv');
   const [isSelected, setIsSelected] = useState(false);
 
   const defaultStyle = () => {

@@ -8,6 +8,18 @@ body,
 
 button {
   font-family: 'Silkscreen', monospace;
+  background-color: oldlace;
+  border-radius: 25%;
+  width: 150px;
+  cursor: pointer;
+}
+
+button:hover {
+  font-family: 'Silkscreen', monospace;
+  background-color: rgb(255, 162, 0);
+  border-radius: 25%;
+  width: 150px;
+  cursor: pointer;
 }
 
 body {

@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 
 function ItemCard({ item }) {
@@ -18,7 +18,7 @@ function ItemCard({ item }) {
 
   return (
     <>
-      <button>
+      <button className="itemCardButton">
         <div className="itemCard" onClick={addToBackpack}>
           <p>{item.name}</p>
           <img 

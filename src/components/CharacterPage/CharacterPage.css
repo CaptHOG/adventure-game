@@ -49,8 +49,19 @@ table {
   text-align: center;
 }
 
-tr, td {
-  outline: 1px solid black;
+tr, thead {
+  /* outline: 1px solid black; */
+  border-radius: 50%;
+}
+
+th:hover {
+  background-color: black;
+  cursor: default;
+}
+
+tr:hover {
+  background-color: rgb(206, 255, 80);
+  cursor: pointer;
 }
 
 form {
@@ -82,4 +93,5 @@ form {
   font-size: xx-large;
   padding: 20px;
   margin: 40px;
+  width: 300px;
 }
