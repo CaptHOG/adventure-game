@@ -48,6 +48,10 @@ function Nav() {
               Running
             </Link>
 
+            <Link className="navLink" to="/friend">
+              Friend
+            </Link>
+
             {/* <Link className="navLink" to="/info">
               Info Page
             </Link> */}

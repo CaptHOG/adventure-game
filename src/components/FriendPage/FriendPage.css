@@ -1,0 +1,8 @@
+#kurtImg {
+  display: inline-flex;
+  position: absolute; 
+  border: 5px solid black;
+  border-radius: 25%;
+  top: 30%;
+  left: 55%;
+}

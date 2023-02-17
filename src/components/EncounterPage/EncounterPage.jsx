@@ -102,7 +102,7 @@ function EncounterPage() {
     return (
       <>
         <div className="encounterDiv">
-          <div id="energyDiv">
+          {/* <div id="energyDiv">
             <label for="energyBar">Energy Points</label>
             <progress 
               id="energyBar" 
@@ -111,7 +111,7 @@ function EncounterPage() {
             >
             </progress>
             <p>{energyPoints}</p>
-          </div>
+          </div> */}
           {/* use && operator to wait for the reducer to be populated */}
           <div className={selectedCharacter[0] && selectedCharacter[0].idle_class}></div>
           <div id="backpackDiv">
@@ -146,7 +146,7 @@ function EncounterPage() {
     return (
       <>
         <div className="encounterDiv">
-          <div id="energyDiv">
+          {/* <div id="energyDiv">
             <label for="energyBar">Energy Points</label>
             <progress 
               id="energyBar" 
@@ -155,7 +155,7 @@ function EncounterPage() {
             >
             </progress>
             <p>{energyPoints}</p>
-          </div>
+          </div> */}
           {/* use && operator to wait for the reducer to be populated */}
           <div className={selectedCharacter[0] && selectedCharacter[0].kick_class}></div>
           {/* <div id="backpackDiv">
@@ -190,7 +190,7 @@ function EncounterPage() {
     return (
       <>
         <div className="encounterDiv">
-          <div id="energyDiv">
+          {/* <div id="energyDiv">
             <label for="energyBar">Energy Points</label>
             <progress 
               id="energyBar" 
@@ -199,7 +199,7 @@ function EncounterPage() {
             >
             </progress>
             <p>{energyPoints}</p>
-          </div>
+          </div> */}
           {/* use && operator to wait for the reducer to be populated */}
           <div className={selectedCharacter[0] && selectedCharacter[0].hurt_class}></div>
           {/* <div id="backpackDiv">
@@ -234,7 +234,7 @@ function EncounterPage() {
     return (
       <>
         <div className="encounterDiv">
-          <div id="energyDiv">
+          {/* <div id="energyDiv">
             <label for="energyBar">Energy Points</label>
             <progress 
               id="energyBar" 
@@ -243,7 +243,7 @@ function EncounterPage() {
             >
             </progress>
             <p>{energyPoints}</p>
-          </div>
+          </div> */}
           {/* use && operator to wait for the reducer to be populated */}
           <div className={selectedCharacter[0] && selectedCharacter[0].idle_class}></div>
           {/* <div id="backpackDiv">
@@ -267,7 +267,7 @@ function EncounterPage() {
           </div> */}
           <div className="guardianDeath"></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">you win</p>
+            <p id="textBoxText">You: "Yay! Now I need to hurry up and get to my friend's!"</p>
           </div>
           <button onClick={goToRunningPage}>Continue</button>
         </div>
