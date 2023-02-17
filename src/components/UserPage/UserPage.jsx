@@ -21,7 +21,7 @@ function UserPage() {
       <p>You and your friend are learning how to code but your friend is stuck and needs help! They’ve reached out to you for help but getting to them will not be easy…. </p>
       {/* <p>Your ID is: {user.id}</p> */}
       {/* <LogOutButton className="btn" /> */}
-      <button onClick={goToCharactersPage}>Let's Go!</button>
+      <button id="goToCharacterPageButton" onClick={goToCharactersPage}>Let's Go!</button>
     </div>
   );
 }

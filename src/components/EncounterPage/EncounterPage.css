@@ -309,6 +309,7 @@ progress {
   100% { background-position: 0 -1440px; }
 }
 
+/* Attack */
 .guardianAttack {
   width: 360px;
   height: 360px;
@@ -324,6 +325,7 @@ progress {
   100% { background-position: 0 -2880px; }
 }
 
+/* Death */
 .guardianDeath {
   width: 360px;
   height: 360px;
@@ -337,7 +339,6 @@ progress {
   animation-fill-mode: forwards;
 }
 @keyframes guardianDeath {
-  /* 99% { background-position: 0 -3600px; } */
   100% { background-position: 0 -3240px; }
 }
 /* ---------- End Animations ---------- */

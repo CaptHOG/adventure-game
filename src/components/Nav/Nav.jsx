@@ -44,6 +44,10 @@ function Nav() {
               Encounter
             </Link>
 
+            <Link className="navLink" to="/running">
+              Running
+            </Link>
+
             {/* <Link className="navLink" to="/info">
               Info Page
             </Link> */}

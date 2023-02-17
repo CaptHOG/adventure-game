@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import Backpack from "../Backpack/Backpack";
 import './EncounterPage.css';
 
 
 function EncounterPage() {
   const dispatch = useDispatch();
+  const history = useHistory();
   const selectedCharacter = useSelector((store) => store.selectedCharacter);
   const backpack = useSelector((store) => store.backpack);
   const energyPoints = useSelector((store) => store.energyPoints);
@@ -89,6 +91,10 @@ function EncounterPage() {
     } else {
       kick();
     }
+  }
+
+  const goToRunningPage = () => {
+    history.push('/running');
   }
 
   // DEFAULT (IDLE)
@@ -263,6 +269,7 @@ function EncounterPage() {
           <div id="textBoxDiv">
             <p id="textBoxText">you win</p>
           </div>
+          <button onClick={goToRunningPage}>Continue</button>
         </div>
       </>
     )

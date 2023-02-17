@@ -26,6 +26,7 @@ import CharacterPage from '../CharacterPage/CharacterPage';
 import ItemsPage from '../ItemsPage/ItemsPage';
 import EncounterPage from '../EncounterPage/EncounterPage';
 import WalkingPage from '../WalkingPage/WalkingPage';
+import RunningPage from '../RunningPage/RunningPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -77,16 +78,20 @@ function App() {
             <CharacterPage />
           </ProtectedRoute>
 
-          <ProtectedRoute exact path="/items">
-            {/* <ItemsPage /> */}
+          {/* <ProtectedRoute exact path="/items">
+            <ItemsPage />
+          </ProtectedRoute> */}
+
+          <ProtectedRoute exact path="/walking">
+            <WalkingPage />
           </ProtectedRoute>
 
           <ProtectedRoute exact path="/encounter">
             <EncounterPage />
           </ProtectedRoute>
 
-          <ProtectedRoute exact path="/walking">
-            <WalkingPage />
+          <ProtectedRoute exact path="/running">
+            <RunningPage />
           </ProtectedRoute>
 
           <Route

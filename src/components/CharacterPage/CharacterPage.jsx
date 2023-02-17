@@ -64,12 +64,13 @@ function CharacterPage() {
       <form>
         <h4>Name your character</h4>
         <input
-          placeholder="Character Name"
+          id="characterNameInput"
+          placeholder="Character Name..."
           type="text"
           value={nameInput}
           onChange={(event) => setNameInput(event.target.value)}
         />
-        <h4>Choose your dino</h4>
+        <h4>Click a dino!</h4>
         <div id="charactersDiv">
           {characters.map((character) => {
             return (
@@ -86,7 +87,7 @@ function CharacterPage() {
       <table>
         <thead>
           <tr>
-            <th colSpan="3">{user.username}'s Characters</th>
+            <th colSpan="2">{user.username}'s Characters</th>
           </tr>
         </thead>
         <tbody>

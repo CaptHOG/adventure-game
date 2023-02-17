@@ -61,16 +61,18 @@ function UserCharacterTable({ userCharacter }) {
         onClick={selectCharacter} 
         className={isSelected || userCharacter.selected ? 'characterRowChangeColor' : 'characterRow'}
       >
-        <td className="characterNameColumn"><p>{userCharacter.name}</p></td>
+        <td className="characterNameColumn">
+          <p>{userCharacter.name}</p>
+        </td>
+        
         <td className="characterImageColumn">
           <img src={userCharacter.image_url} width="100px"/>
         </td>
-        <td>
-          <button onClick={() => deleteCharacter(userCharacter)}>Remove Character</button>
-        </td>
       </tr>
+      <button onClick={() => deleteCharacter(userCharacter)}>Remove Character</button>
     </>
   )
 }
 
 export default UserCharacterTable;
+

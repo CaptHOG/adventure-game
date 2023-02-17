@@ -1,18 +1,35 @@
+#characterNameInput {
+  font-family: 'Silkscreen';
+  text-align: center;
+  border-radius: 10%;
+  font-size: 20px;
+}
+
 .imgDiv {
   margin: 10px;
   border: 2px solid;
+  border-radius: 25%;
   padding: 10px;
+  background-color: oldlace;
 }
 
 .imgDiv1 {
   margin: 10px;
   border: 2px solid;
+  border-radius: 25%;
   padding: 10px;
-  background: chartreuse;
+  background-color: oldlace;
+  animation: mymove 800 1s;
+}
+@keyframes mymove {
+  0% { background-color: chartreuse; }
+  100% { background-color: oldlace; }
 }
 
 .characterDivButton {
   margin: 10px;
+  background-color: oldlace;
+  border-radius: 25%;
 }
 
 #addCharacterButton {
@@ -25,10 +42,10 @@ thead {
 }
 
 table {
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 50%;
   text-align: center;
 }
 
@@ -62,7 +79,7 @@ form {
 }
 
 #goToWalkingButton {
-  font-size: xxx-large;
+  font-size: xx-large;
   padding: 20px;
   margin: 40px;
 }

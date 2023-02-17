@@ -12,6 +12,7 @@ function* fetchSelectedCharacter() {
   }
 }
 
+// POST
 function* postSelectedCharacter(action) {
   try {
     const characterToPost = action.payload;
@@ -39,7 +40,7 @@ function* updateCharacterPoints(action) {
 
 function* selectedCharacterSaga() {
   yield takeLatest('SAGA/FETCH_SELECTED_CHARACTER', fetchSelectedCharacter);
-  yield takeLatest('SAGA/POST_SELECTED_CHARACTER', postSelectedCharacter);
+  // yield takeLatest('SAGA/POST_SELECTED_CHARACTER', postSelectedCharacter);
   // yield takeLatest('SAGA/UPDATE_ENERGY_POINTS', updateCharacterPoints);
 }
 

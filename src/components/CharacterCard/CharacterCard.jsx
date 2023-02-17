@@ -9,16 +9,22 @@ function CharacterCard({ character, nameInput }) {
   const [imgDiv, setImgDiv] = useState('imgDiv');
   const [isSelected, setIsSelected] = useState(false);
 
+  const defaultStyle = () => {
+    setIsSelected(false);
+  }
+
   const selectCharacter = (event) => {
     event.preventDefault();
+    setIsSelected(true);
 
-    if (isSelected) {
-      setImgDiv('imgDiv1');
-      setIsSelected(false);
-    } else if (!isSelected) {
-      setImgDiv('imgDiv');
-      setIsSelected(true);
-    }
+
+    // if (isSelected) {
+    //   setImgDiv('imgDiv1');
+    //   setIsSelected(false);
+    // } else if (!isSelected) {
+    //   setImgDiv('imgDiv');
+    //   setIsSelected(true);
+    // }
     
     let newCharacter = {
       name: nameInput,
@@ -37,11 +43,14 @@ function CharacterCard({ character, nameInput }) {
       type: 'SET_NEW_CHARACTER',
       payload: newCharacter
     })
+
+    setTimeout(defaultStyle, 1000);
   }
 
   return (
     <>
       <button className="characterDivButton" onClick={selectCharacter}>
+      {/* <div className='imgDiv'> */}
         <div className={isSelected ? 'imgDiv1' : 'imgDiv'}>
           <img 
             height="100px"
