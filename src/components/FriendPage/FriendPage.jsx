@@ -22,6 +22,7 @@ function FriendPage() {
   return (
     <>
       <div className="encounterDiv">
+        <img id="backgroundImg" src="/images/battle-background-sunny-hills.png"/>
           {/* <div id="energyDiv">
             <label for="energyBar">Energy Points</label>
             <progress 

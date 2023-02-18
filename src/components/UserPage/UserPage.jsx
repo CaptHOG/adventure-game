@@ -15,8 +15,8 @@ function UserPage() {
 
   return (
     <div className="container">
-      
-      <h1>Welcome, {user.username}!</h1>
+      <h1>Code Cranker</h1>
+      <h2>Welcome, {user.username}!</h2>
       <h2></h2>
       <p>You and your friend are learning how to code but your friend is stuck and needs help! They’ve reached out to you for help but getting to them will not be easy…. </p>
       {/* <p>Your ID is: {user.id}</p> */}

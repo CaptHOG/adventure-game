@@ -102,6 +102,7 @@ function EncounterPage() {
     return (
       <>
         <div className="encounterDiv">
+          <img id="backgroundImg" src="/images/battle-background-sunny-hills.png"/>
           {/* <div id="energyDiv">
             <label for="energyBar">Energy Points</label>
             <progress 
@@ -146,6 +147,7 @@ function EncounterPage() {
     return (
       <>
         <div className="encounterDiv">
+          <img id="backgroundImg" src="/images/battle-background-sunny-hills.png"/>
           {/* <div id="energyDiv">
             <label for="energyBar">Energy Points</label>
             <progress 
@@ -190,6 +192,7 @@ function EncounterPage() {
     return (
       <>
         <div className="encounterDiv">
+          <img id="backgroundImg" src="/images/battle-background-sunny-hills.png"/>
           {/* <div id="energyDiv">
             <label for="energyBar">Energy Points</label>
             <progress 
@@ -234,6 +237,7 @@ function EncounterPage() {
     return (
       <>
         <div className="encounterDiv">
+          <img id="backgroundImg" src="/images/battle-background-sunny-hills.png"/>
           {/* <div id="energyDiv">
             <label for="energyBar">Energy Points</label>
             <progress 
@@ -269,7 +273,7 @@ function EncounterPage() {
           <div id="textBoxDiv">
             <p id="textBoxText">You: "Yay! Now I need to hurry up and get to my friend's!"</p>
           </div>
-          <button onClick={goToRunningPage}>Continue</button>
+          <button id="goToRunningPageButton" onClick={goToRunningPage}>Continue</button>
         </div>
       </>
     )

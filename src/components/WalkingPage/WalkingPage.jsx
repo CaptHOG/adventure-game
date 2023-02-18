@@ -22,6 +22,7 @@ function WalkingPage() {
   return (
     <>
       <div className="encounterDiv">
+        <img id="backgroundImg" src="/images/battle-background-sunny-hills.png"/>
         {/* <div id="energyDiv">
           <label for="energyBar">Energy Points</label>
           <progress 
@@ -57,7 +58,7 @@ function WalkingPage() {
         <div id="textBoxDiv">
           <p id="textBoxText">You venture onward to your friend’s, not knowing what you may encounter….</p>
         </div>
-        <button onClick={goToEncounter}>Continue</button>
+        <button id="goToEncounterButton" onClick={goToEncounter}>Continue</button>
       </div>
     </>
   )

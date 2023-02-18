@@ -6,3 +6,12 @@
   top: 30%;
   left: 55%;
 }
+
+#backgroundImg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
