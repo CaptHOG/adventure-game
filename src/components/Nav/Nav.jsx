@@ -52,6 +52,10 @@ function Nav() {
               Friend
             </Link>
 
+            <Link className="navLink" to="/second_encounter">
+              Second Encounter
+            </Link>
+
             {/* <Link className="navLink" to="/info">
               Info Page
             </Link> */}

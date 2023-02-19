@@ -15,8 +15,11 @@ function RunningPage() {
     })
   }, [])
 
-  const goToFriend = () => {
-    history.push('/friend');
+  const goToSecondEncounter = () => {
+    dispatch({
+      type: 'RESET_HIT_POINTS'
+    })
+    history.push('/second_encounter');
   }
 
   return (
@@ -59,7 +62,7 @@ function RunningPage() {
       <div id="textBoxDiv">
         <p id="textBoxText">You: "Now I need to hurry up and get to my friend's!"</p>
       </div>
-      <button id="goToEncounterButton" onClick={goToFriend}>Continue</button>
+      <button id="goToEncounterButton" onClick={goToSecondEncounter}>Continue</button>
     </div>
     </>
   )
