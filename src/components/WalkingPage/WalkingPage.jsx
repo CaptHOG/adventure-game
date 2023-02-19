@@ -56,7 +56,7 @@ function WalkingPage() {
         </div>
         <div className='guardianIdle'></div> */}
         <div id="textBoxDiv">
-          <p id="textBoxText">You venture onward to your friend’s, not knowing what you may encounter….</p>
+          <p id="textBoxText">You venture onward to your friend's, not knowing what you may encounter….</p>
         </div>
         <button id="goToEncounterButton" onClick={goToEncounter}>Continue</button>
       </div>

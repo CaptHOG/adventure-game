@@ -1,0 +1,59 @@
+/* Red Dino */
+.redDinoRun {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/red-dino-run-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: redDinoRun 500ms steps(6) infinite;
+}
+@keyframes redDinoRun {
+  100% { background-position: -1152px 0; }
+}
+
+/* Blue Dino */
+.blueDinoRun {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/blue-dino-run-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: blueDinoRun 500ms steps(6) infinite;
+}
+@keyframes blueDinoRun {
+  100% { background-position: -1152px 0; }
+}
+
+/* Yellow Dino */
+.yellowDinoRun {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/yellow-dino-run-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: yellowDinoRun 500ms steps(6) infinite;
+}
+@keyframes yellowDinoRun {
+  100% { background-position: -1152px 0; }
+}
+
+/* Green Dino */
+.greenDinoRun {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/green-dino-run-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: greenDinoRun 500ms steps(6) infinite;
+}
+@keyframes greenDinoRun {
+  100% { background-position: -1152px 0; }
+}

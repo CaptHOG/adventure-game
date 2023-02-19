@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { useState, useEffect } from 'react';
 
 
 function CharacterCard({ character, nameInput }) {
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
-  // const [imgDiv, setImgDiv] = useState('imgDiv');
   const [isSelected, setIsSelected] = useState(false);
 
   const defaultStyle = () => {
@@ -16,15 +14,6 @@ function CharacterCard({ character, nameInput }) {
   const selectCharacter = (event) => {
     event.preventDefault();
     setIsSelected(true);
-
-
-    // if (isSelected) {
-    //   setImgDiv('imgDiv1');
-    //   setIsSelected(false);
-    // } else if (!isSelected) {
-    //   setImgDiv('imgDiv');
-    //   setIsSelected(true);
-    // }
     
     let newCharacter = {
       name: nameInput,
@@ -34,9 +23,10 @@ function CharacterCard({ character, nameInput }) {
       kick_class: character.kick_class,
       hurt_class: character.hurt_class,
       walk_class: character.walk_class,
+      run_class: character.run_class,
+      selected: character.selected,
       user_id: user.id
     }
-    // console.log('sendCharacter newCharacter:', newCharacter)
 
     dispatch({
       // send to newCharacter reducer
@@ -50,7 +40,6 @@ function CharacterCard({ character, nameInput }) {
   return (
     <>
       <button className="characterDivButton" onClick={selectCharacter}>
-      {/* <div className='imgDiv'> */}
         <div className={isSelected ? 'imgDiv1' : 'imgDiv'}>
           <img 
             height="100px"

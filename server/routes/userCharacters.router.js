@@ -27,7 +27,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 
 // POST /userCharacters
 router.post('/', rejectUnauthenticated, (req, res) => {
-  // console.log('/userCharacters req.body:', req.body);
+  console.log('/userCharacters req.body:', req.body);
   const newCharacter = req.body;
 
   const queryText = `
@@ -39,10 +39,12 @@ router.post('/', rejectUnauthenticated, (req, res) => {
       "kick_class", 
       "hurt_class",
       "walk_class",
+      "run_class",
+      "selected",
       "user_id"
     )
       VALUES
-      ($1, $2, $3, $4, $5, $6, $7, $8)
+      ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
     ;
   `;
   const queryValues = [
@@ -53,6 +55,8 @@ router.post('/', rejectUnauthenticated, (req, res) => {
     newCharacter.kick_class,
     newCharacter.hurt_class,
     newCharacter.walk_class,
+    newCharacter.run_class,
+    newCharacter.selected,
     newCharacter.user_id
   ]
 
@@ -99,7 +103,7 @@ router.put('/:id', rejectUnauthenticated, (req, res) => {
   let selectedCharacterId = req.params.id;
   let isSelected = true;
 
-  // console.log('selectedCharacterId:', selectedCharacterId)
+  console.log('selectedCharacterId:', selectedCharacterId)
 
   let queryText = `
     UPDATE "user_characters"

@@ -45,6 +45,8 @@ function UserCharacterTable({ userCharacter }) {
       kick_class: userCharacter.kick_class,
       hurt_class: userCharacter.hurt_class,
       walk_class: userCharacter.walk_class,
+      run_class: userCharacter.run_class,
+      selected: userCharacter.selected,
       user_id: userCharacter.user_id
     }
     // console.log('selectedCharacter from UserCharacterTable:', selectedCharacter);
