@@ -14,33 +14,34 @@ CREATE TABLE "user" (
 CREATE TABLE "characters" (
 	"id" SERIAL PRIMARY KEY,
 	"name" VARCHAR(100) NOT NULL,
+	"energy_points" INT NOT NULL,
 	"image_url" VARCHAR(255) NOT NULL,
-	"energy_points" INT NOT NULL
+	"idle_class" VARCHAR(255) NOT NULL,
+	"kick_class" VARCHAR(255) NOT NULL,
+	"hurt_class" VARCHAR(255) NOT NULL,
+	"walk_class" VARCHAR(255) NOT NULL,
+	"run_class" VARCHAR(255) NOT NULL,
+	"selected" BOOLEAN DEFAULT false
 );
 
-CREATE TABLE "enemies" (
-	"id" SERIAL PRIMARY KEY,
-	"name" VARCHAR(100),
-	"image" VARCHAR(255),
-	"hit_points" INT,
-	"attack_damage" INT,
-	"damage_resistance" VARCHAR(100)
-);
-
-CREATE TABLE "items" (
-	"id" SERIAL PRIMARY KEY,
-	"name" VARCHAR(100) NOT NULL,
-	"image_url" VARCHAR(255) NOT NULL,
-	"description" VARCHAR(255) NOT NULL,
-	"attack_damage" INT NOT NULL,
-	"energy_cost" INT NOT NULL
-);
+INSERT INTO "characters" ("name", "energy_points", "image_url", "idle_class", "kick_class", "hurt_class", "walk_class", "run_class")
+VALUES
+	('Blue Dino', '200', 'images/blue-dino-single-scaled.png', 'blueDinoIdle', 'blueDinoKick', 'blueDinoHurt', 'blueDinoWalk', 'blueDinoRun'),
+	('Red Dino', '200', 'images/red-dino-single-scaled.png', 'redDinoIdle', 'redDinoKick', 'redDinoHurt', 'redDinoWalk', 'redDinoRun'),
+	('Yellow Dino', '200', 'images/yellow-dino-single-scaled.png', 'yellowDinoIdle', 'yellowDinoKick', 'yellowDinoHurt', 'yellowDinoWalk', 'yellowDinoRun'),
+	('Green Dino', '200', 'images/green-dino-single-scaled.png', 'greenDinoIdle', 'greenDinoKick', 'greenDinoHurt', 'greenDinoWalk', 'greenDinoRun')
+;
 
 CREATE TABLE "user_characters" (
 	"id" SERIAL PRIMARY KEY,
 	"name" VARCHAR(100) NOT NULL,
-	"image_url" VARCHAR(255) NOT NULL,
 	"energy_points" INT NOT NULL,
+	"image_url" VARCHAR(255) NOT NULL,
+	"idle_class" VARCHAR(255) NOT NULL,
+	"kick_class" VARCHAR(255) NOT NULL,
+	"hurt_class" VARCHAR(255) NOT NULL,
+	"walk_class" VARCHAR(255) NOT NULL,
+	"run_class" VARCHAR(255) NOT NULL,
 	"selected" BOOLEAN DEFAULT false,
 	"user_id" INT REFERENCES "user"
 );
@@ -53,3 +54,14 @@ CREATE TABLE "backpack" (
 	"attack_damage" INT NOT NULL,
 	"energy_cost" INT NOT NULL
 );
+
+INSERT INTO "backpack" (
+	"name",
+	"image_url",
+	"description",
+	"attack_damage",
+	"energy_cost"
+)
+	VALUES
+	('Dino Kick', 'images/dinosaur-footprint-circle.png', 'Kick baddies', '30', '1')
+;
