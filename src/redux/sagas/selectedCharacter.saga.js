@@ -13,30 +13,30 @@ function* fetchSelectedCharacter() {
 }
 
 // POST
-function* postSelectedCharacter(action) {
-  try {
-    const characterToPost = action.payload;
-    const response = yield axios.post('/selectedCharacter', characterToPost);
-    yield put({ type: 'SAGA/FETCH_SELECTED_CHARACTER' })
-  } catch (error) {
-    console.log('Error postSelectedCharacter saga:', error)
-  }
-}
+// function* postSelectedCharacter(action) {
+//   try {
+//     const characterToPost = action.payload;
+//     const response = yield axios.post('/selectedCharacter', characterToPost);
+//     yield put({ type: 'SAGA/FETCH_SELECTED_CHARACTER' })
+//   } catch (error) {
+//     console.log('Error postSelectedCharacter saga:', error)
+//   }
+// }
 
 // PUT
-function* updateCharacterPoints(action) {
-  try {
-    const response = yield axios.put(`/selectedCharacter/${action.payload.characterId}`)
+// function* updateCharacterPoints(action) {
+//   try {
+//     const response = yield axios.put(`/selectedCharacter/${action.payload.characterId}`)
 
-    console.log('action.payload updateCharacterPoints:', action.payload);
+//     console.log('action.payload updateCharacterPoints:', action.payload);
 
-    yield put({ type: 'UPDATE_CHARACTER', payload: action.payload })
-    // yield put to bring the DOM back in sync
-    yield put({ type: 'SAGA/FETCH_USER_CHARACTERS' })
-  } catch (error) {
-    console.error('Error updateCharacter saga:', error)
-  }
-}
+//     yield put({ type: 'UPDATE_CHARACTER', payload: action.payload })
+//     // yield put to bring the DOM back in sync
+//     yield put({ type: 'SAGA/FETCH_USER_CHARACTERS' })
+//   } catch (error) {
+//     console.error('Error updateCharacter saga:', error)
+//   }
+// }
 
 function* selectedCharacterSaga() {
   yield takeLatest('SAGA/FETCH_SELECTED_CHARACTER', fetchSelectedCharacter);

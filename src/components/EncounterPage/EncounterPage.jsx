@@ -94,7 +94,7 @@ function EncounterPage() {
   }
 
   const goToRunningPage = () => {
-    history.push('/friend');
+    history.push('/running');
   }
 
   // DEFAULT (IDLE)
@@ -136,7 +136,7 @@ function EncounterPage() {
           </div> */}
           <div className='guardianIdle'></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">Oh no! You've found a baddy on the way to your friend's! Defeat them to continue on.</p>
+            <p id="textBoxText">Oh no! You've found a baddy on the way to your friend's! Use the Dino Kick button to defeat them to continue on.</p>
           </div>
         </div>
       </>
@@ -271,7 +271,7 @@ function EncounterPage() {
           </div> */}
           <div className="guardianDeath"></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">You: "Yay! Now I need to hurry up and get to my friend's!"</p>
+            <p id="textBoxText">You: "Yay! The baddy is gone!"</p>
           </div>
           <button id="goToRunningPageButton" onClick={goToRunningPage}>Continue</button>
         </div>
