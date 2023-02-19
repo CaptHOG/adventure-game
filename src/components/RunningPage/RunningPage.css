@@ -4,7 +4,7 @@
   height: 192px;
   background: url('/public/images/red-dino-run-scaled.png');
   display: inline-flex;
-  left: 23%;
+  left: 25%;
   top: 44%;
   position: absolute;
   animation: redDinoRun 500ms steps(6) infinite;
@@ -19,7 +19,7 @@
   height: 192px;
   background: url('/public/images/blue-dino-run-scaled.png');
   display: inline-flex;
-  left: 23%;
+  left: 25%;
   top: 44%;
   position: absolute;
   animation: blueDinoRun 500ms steps(6) infinite;
@@ -34,7 +34,7 @@
   height: 192px;
   background: url('/public/images/yellow-dino-run-scaled.png');
   display: inline-flex;
-  left: 23%;
+  left: 25%;
   top: 44%;
   position: absolute;
   animation: yellowDinoRun 500ms steps(6) infinite;
@@ -49,7 +49,7 @@
   height: 192px;
   background: url('/public/images/green-dino-run-scaled.png');
   display: inline-flex;
-  left: 23%;
+  left: 25%;
   top: 44%;
   position: absolute;
   animation: greenDinoRun 500ms steps(6) infinite;

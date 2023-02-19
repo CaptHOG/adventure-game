@@ -224,7 +224,7 @@ function SecondEncounter() {
             </progress>
             <p>{hitPoints}</p>
           </div> */}
-          <div className="guardianAttack"></div>
+          <div className="golemAttack"></div>
           <div id="textBoxDiv">
             <p id="textBoxText">You: "Take that you bully!"</p>
           </div>
@@ -269,7 +269,7 @@ function SecondEncounter() {
             </progress>
             <p>{hitPoints}</p>
           </div> */}
-          <div className="guardianDeath"></div>
+          <div className="golemDeath"></div>
           <div id="textBoxDiv">
             <p id="textBoxText">You: "Yay! The baddy is gone!"</p>
           </div>

@@ -37,7 +37,7 @@
   height: 192px;
   background: url('/public/images/blue-dino-walk-scaled.png');
   display: inline-flex;
-  left: 23%;
+  left: 25%;
   top: 44%;
   position: absolute;
   animation: blueDinoWalk 600ms steps(6) infinite;
@@ -52,7 +52,7 @@
   height: 192px;
   background: url('/public/images/red-dino-walk-scaled.png');
   display: inline-flex;
-  left: 23%;
+  left: 25%;
   top: 44%;
   position: absolute;
   animation: redDinoWalk 600ms steps(6) infinite;
@@ -67,7 +67,7 @@
   height: 192px;
   background: url('/public/images/yellow-dino-walk-scaled.png');
   display: inline-flex;
-  left: 23%;
+  left: 25%;
   top: 44%;
   position: absolute;
   animation: yellowDinoWalk 600ms steps(6) infinite;
@@ -82,7 +82,7 @@
   height: 192px;
   background: url('/public/images/green-dino-walk-scaled.png');
   display: inline-flex;
-  left: 23%;
+  left: 25%;
   top: 44%;
   position: absolute;
   animation: greenDinoWalk 600ms steps(6) infinite;
