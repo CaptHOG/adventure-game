@@ -295,24 +295,25 @@ progress {
   100% { background-position: 0 -2880px; }
 }
 
-/* .golemHurt {
-  width: 640px;
-  height: 640px;
-  background: url('/public/images/golem-hurt-scaled.png');
+.golemHurt {
+  width: 480px;
+  height: 480px;
+  background: url('/public/images/golem-hurt-scaled-300.png');
   display: inline-flex;
   left: 55%;
-  top: 10%;
+  top: 18%;
   position: absolute;
+  transform: scale(1.5);
   animation: golemHurt 1000ms steps(4) 1;
 }
 @keyframes golemHurt {
-  100% { background-position: 0 -2560px; }
+  100% { background-position: 0 -1920px; }
 }
 
-.golemAttack {
+/* .golemAttack {
   width: 480px;
   height: 480px;
-  background: url('/public/images/golem-attack-scaled-480.png');
+  background: url('/public/images/golem-attack-scaled-300.png');
   display: inline-flex;
   left: 55%;
   top: 10%;

@@ -179,7 +179,7 @@ function SecondEncounter() {
             </progress>
             <p>{hitPoints}</p>
           </div> */}
-          <div className="guardianHurt"></div>
+          <div className="golemHurt"></div>
           <div id="textBoxDiv">
             <p id="textBoxText">You: "Take that you bully!"</p>
           </div>
