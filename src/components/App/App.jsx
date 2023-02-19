@@ -28,6 +28,7 @@ import EncounterPage from '../EncounterPage/EncounterPage';
 import WalkingPage from '../WalkingPage/WalkingPage';
 import RunningPage from '../RunningPage/RunningPage';
 import FriendPage from '../FriendPage/FriendPage';
+import SecondEncounter from '../SecondEncounter.jsx/SecondEncounter';
 
 function App() {
   const dispatch = useDispatch();
@@ -93,6 +94,10 @@ function App() {
 
           <ProtectedRoute exact path="/running">
             <RunningPage />
+          </ProtectedRoute>
+
+          <ProtectedRoute exact path="/second_encounter">
+            <SecondEncounter />
           </ProtectedRoute>
 
           <ProtectedRoute exact path="/friend">

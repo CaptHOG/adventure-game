@@ -1,0 +1,391 @@
+/* ----- Golem ----- */
+/* Idle */
+.golemIdle {
+  width: 480px;
+  height: 480px;
+  background: url('/public/images/golem-idle-scaled-300.png');
+  display: inline-flex;
+  left: 60%;
+  top: 29%;
+  position: absolute;
+  transform: scale(1.5);
+  animation: golemIdle 900ms steps(6) infinite;
+}
+@keyframes golemIdle {
+  100% { background-position: 0 -2880px; }
+}
+
+/* ---------------------------------------------- */
+
+body {
+  background-color: rgb(190, 158, 106);
+}
+
+#backgroundImg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+progress {
+  margin: 10px;
+  padding: 20px;
+}
+
+#energyDiv {
+  display: inline-grid;
+  text-align: center;
+  float: left;
+}
+
+#healthDiv {
+  display: inline-grid;
+  text-align: center;
+  float: right;
+}
+
+#backpackDiv {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 65%;
+  left: 20%;
+  background-color: oldlace;
+  border-radius: 25%;
+}
+
+.itemCard {
+  background-color: oldlace;
+  border-radius: 25%;
+}
+
+.itemCardButton {
+  background-color: oldlace;
+}
+
+#textBoxDiv {
+  background-color: black;
+  width: 500px;
+  height: auto;
+  border: 5px solid white;
+  position: absolute;
+  left: 34%;
+  top: 70%;
+}
+
+#textBoxText {
+  color: white;
+}
+
+#goToRunningPageButton {
+  position: absolute;
+  top: 86%;
+  right: 46%;
+  font-size: 18px;
+}
+
+/* ---------- Start Animations ---------- */
+/* -------- Start Dinos -------- */
+/* ----- Blue Dino ----- */
+/* Idle */
+.blueDinoIdle {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/blue-dino-idle-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: blueDinoIdle 700ms steps(4) infinite;
+}
+@keyframes blueDinoIdle {
+  100% { background-position: -768px 0; }
+}
+
+/* Kick */
+.blueDinoKick {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/blue-dino-kick-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: blueDinoKick 600ms steps(4) 1;
+}
+@keyframes blueDinoKick {
+  100% { background-position: -768px 0; }
+}
+
+/* Hurt */
+.blueDinoHurt {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/blue-dino-hurt-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: blueDinoHurt 800ms steps(4) 1;
+}
+@keyframes blueDinoHurt {
+  100% { background-position: -768px 0; }
+}
+/* End Blue Dino */
+
+/* ----- Red Dino ----- */
+/* Idle */
+.redDinoIdle {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/red-dino-idle-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: redDinoIdle 700ms steps(4) infinite;
+}
+@keyframes redDinoIdle {
+  100% { background-position: -768px 0; }
+}
+
+/* Kick */
+.redDinoKick {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/red-dino-kick-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: redDinoKick 600ms steps(4) 1;
+}
+@keyframes redDinoKick {
+  100% { background-position: -768px 0; }
+}
+
+/* Hurt */
+.redDinoHurt {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/red-dino-hurt-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: redDinoHurt 800ms steps(4) 1;
+}
+@keyframes redDinoHurt {
+  100% { background-position: -768px 0; }
+}
+/* End Red Dino */
+
+/* ----- Yellow Dino ----- */
+/* Idle */
+.yellowDinoIdle {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/yellow-dino-idle-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: yellowDinoIdle 700ms steps(4) infinite;
+}
+@keyframes yellowDinoIdle {
+  100% { background-position: -768px 0; }
+}
+
+/* Kick */
+.yellowDinoKick {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/yellow-dino-kick-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: yellowDinoKick 600ms steps(4) 1;
+}
+@keyframes yellowDinoKick {
+  100% { background-position: -768px 0; }
+}
+
+/* Hurt */
+.yellowDinoHurt {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/yellow-dino-hurt-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: yellowDinoHurt 800ms steps(4) 1;
+}
+@keyframes yellowDinoHurt {
+  100% { background-position: -768px 0; }
+}
+/* End Yellow Dino */
+
+/* ----- Green Dino ----- */
+/* Idle */
+.greenDinoIdle {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/green-dino-idle-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: greenDinoIdle 700ms steps(4) infinite;
+}
+@keyframes greenDinoIdle {
+  100% { background-position: -768px 0; }
+}
+
+/* Kick */
+.greenDinoKick {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/green-dino-kick-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: greenDinoKick 600ms steps(4) 1;
+}
+@keyframes greenDinoKick {
+  100% { background-position: -768px 0; }
+}
+
+/* Hurt */
+.greenDinoHurt {
+  width: 192px;
+  height: 192px;
+  background: url('/public/images/green-dino-hurt-scaled.png');
+  display: inline-flex;
+  left: 23%;
+  top: 44%;
+  position: absolute;
+  animation: greenDinoHurt 800ms steps(4) 1;
+}
+@keyframes greenDinoHurt {
+  100% { background-position: -768px 0; }
+}
+/* End Green Dino */
+/* -------- End Dinos -------- */
+
+/* ----- Golem ----- */
+/* Idle */
+.golemIdle {
+  width: 480px;
+  height: 480px;
+  background: url('/public/images/golem-idle-scaled-300.png');
+  display: inline-flex;
+  left: 55%;
+  top: 18%;
+  position: absolute;
+  transform: scale(1.5);
+  animation: golemIdle 900ms steps(6) infinite;
+}
+@keyframes golemIdle {
+  100% { background-position: 0 -2880px; }
+}
+
+/* .golemHurt {
+  width: 640px;
+  height: 640px;
+  background: url('/public/images/golem-hurt-scaled.png');
+  display: inline-flex;
+  left: 55%;
+  top: 10%;
+  position: absolute;
+  animation: golemHurt 1000ms steps(4) 1;
+}
+@keyframes golemHurt {
+  100% { background-position: 0 -2560px; }
+}
+
+.golemAttack {
+  width: 480px;
+  height: 480px;
+  background: url('/public/images/golem-attack-scaled-480.png');
+  display: inline-flex;
+  left: 55%;
+  top: 10%;
+  position: absolute;
+  animation: golemAttack 1000ms steps(8) 1;
+}
+@keyframes golemAttack {
+  100% { background-position: 0 -3840px; }
+} */
+
+/* ----- Guardian ----- */
+/* Idle */
+.guardianIdle {
+  width: 360px;
+  height: 360px;
+  background: url('/public/images/guardian-idle-scaled-300.png');
+  display: inline-flex;
+  left: 60%;
+  top: 29%;
+  position: absolute;
+  transform: scale(1.5);
+  animation: guardianIdle 900ms steps(6) infinite;
+}
+@keyframes guardianIdle {
+  100% { background-position: 0 -2160px; }
+}
+
+/* Hurt */
+.guardianHurt {
+  width: 360px;
+  height: 360px;
+  background: url('/public/images/guardian-hurt-scaled-300.png');
+  display: inline-flex;
+  left: 60%;
+  top: 29%;
+  position: absolute;
+  transform: scale(1.5);
+  animation: guardianHurt 1000ms steps(4) 1;
+}
+@keyframes guardianHurt {
+  100% { background-position: 0 -1440px; }
+}
+
+/* Attack */
+.guardianAttack {
+  width: 360px;
+  height: 360px;
+  background: url('/public/images/guardian-attack2-scaled-300.png');
+  display: inline-flex;
+  left: 60%;
+  top: 29%;
+  position: absolute;
+  transform: scale(1.5);
+  animation: guardianAttack 700ms steps(8) 1;
+}
+@keyframes guardianAttack {
+  100% { background-position: 0 -2880px; }
+}
+
+/* Death */
+.guardianDeath {
+  width: 360px;
+  height: 360px;
+  background: url('/public/images/guardian-death-scaled-300.png');
+  display: inline-flex;
+  left: 60%;
+  top: 29%;
+  position: absolute;
+  transform: scale(1.5);
+  animation: guardianDeath 1000ms steps(9) 1;
+  animation-fill-mode: forwards;
+}
+@keyframes guardianDeath {
+  100% { background-position: 0 -3240px; }
+}
+/* ---------- End Animations ---------- */
