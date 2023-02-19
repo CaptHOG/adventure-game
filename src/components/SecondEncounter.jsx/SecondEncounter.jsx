@@ -93,8 +93,8 @@ function SecondEncounter() {
     }
   }
 
-  const goToRunningPage = () => {
-    // history.push('/running');
+  const goToFriendPage = () => {
+    history.push('/friend');
   }
 
   // DEFAULT (IDLE)
@@ -136,7 +136,7 @@ function SecondEncounter() {
           </div> */}
           <div className='golemIdle'></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">Oh no! You've found a baddy on the way to your friend's! Use the Dino Kick button to defeat them to continue on.</p>
+            <p id="textBoxText">What!? Another Baddy!? Oh no! Use the Dino Kick button to defeat them to continue on.</p>
           </div>
         </div>
       </>
@@ -271,9 +271,9 @@ function SecondEncounter() {
           </div> */}
           <div className="golemDeath"></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">You: "Yay! The baddy is gone!"</p>
+            <p id="textBoxText">You: "Finally! I really hope that's the last of the baddies!"</p>
           </div>
-          <button id="goToRunningPageButton" onClick={goToRunningPage}>Continue</button>
+          <button id="goToRunningPageButton" onClick={goToFriendPage}>Continue</button>
         </div>
       </>
     )

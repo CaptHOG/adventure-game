@@ -16,6 +16,9 @@ function RunningPage() {
   }, [])
 
   const goToSecondEncounter = () => {
+    dispatch({
+      type: 'RESET_HIT_POINTS'
+    })
     history.push('/second_encounter');
   }
 

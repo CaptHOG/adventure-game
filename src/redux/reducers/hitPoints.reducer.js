@@ -3,9 +3,10 @@ const hitPointsReducer = (state = 100, action) => {
     let newAmount = state - 49;
     if (newAmount <= 0) {
       newAmount = 0;
-      // alert('YOU WIN!')
     }
     return newAmount;
+  } else if (action.type === 'RESET_HIT_POINTS') {
+    return state = 100;
   } else {
     return state;
   }

@@ -13,18 +13,19 @@ function AboutPage() {
         <h2>Technologies:</h2>
         <ul id="technologiesList">
           <li>React</li>
+          <li>CSS Keyframes</li>
           <li>Redux</li>
           <li>Sagas</li>
           <li>Express</li>
           <li>Node.JS</li>
-          <li>CSS Keyframes</li>
+          <li>PostgreSQL</li>
         </ul>
       </div>
       <div id="creditsDiv">
         <h2>Credits</h2>
         <ul id="creditsList">
           <li>Dinos: <a href="https://arks.itch.io/dino-characters">https://arks.itch.io/dino-characters</a></li>
-          <li>Baddy: <a href="https://eddies-workshop.itch.io/old-guardian">https://eddies-workshop.itch.io/old-guardian</a></li>
+          <li>Baddies: <a href="https://eddies-workshop.itch.io/">https://eddies-workshop.itch.io/</a></li>
           <li>Kurt Robotnegut Image: Key Clark</li>
         </ul>
       </div>
@@ -33,6 +34,8 @@ function AboutPage() {
         <ul id="thankYouList">
           <li>Prime Staff</li>
           <li>Vonnegut Cohort</li>
+          <li>Family</li>
+          <li>Friends</li>
         </ul>
       </div>
       <div>
