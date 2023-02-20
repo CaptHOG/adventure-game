@@ -136,7 +136,9 @@ function EncounterPage() {
           </div> */}
           <div className='guardianIdle'></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">Oh no! You've found a baddy on the way to your friend's! Use the Dino Kick button to defeat them to continue on.</p>
+            <p id="textBoxText">Oh no! {selectedCharacter[0] && selectedCharacter[0].name} found a baddy on the way to their friend's! 
+              <br/>Use the Dino Kick button to defeat the baddy and continue on.
+            </p>
           </div>
         </div>
       </>
@@ -181,7 +183,7 @@ function EncounterPage() {
           </div> */}
           <div className="guardianHurt"></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">You: "Take that you bully!"</p>
+            <p id="textBoxText">{selectedCharacter[0] && selectedCharacter[0].name}: "Take that you bully!"</p>
           </div>
         </div>
       </>
@@ -226,7 +228,7 @@ function EncounterPage() {
           </div> */}
           <div className="guardianAttack"></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">You: "Take that you bully!"</p>
+            <p id="textBoxText">{selectedCharacter[0] && selectedCharacter[0].name}: "Take that you bully!"</p>
           </div>
         </div>
       </>
@@ -271,7 +273,7 @@ function EncounterPage() {
           </div> */}
           <div className="guardianDeath"></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">You: "Yay! The baddy is gone!"</p>
+            <p id="textBoxText">{selectedCharacter[0] && selectedCharacter[0].name}: "Yay! The baddy is gone!"</p>
           </div>
           <button id="goToRunningPageButton" onClick={goToRunningPage}>Continue</button>
         </div>

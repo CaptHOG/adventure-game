@@ -137,8 +137,8 @@ input {
 #technologiesDiv {
   float: left;
   position: absolute;
-  left: 25%;
-  top: 20%
+  left: 23%;
+  top: 17%
 }
 
 #creditsList {
@@ -154,8 +154,8 @@ input {
 
 #thankYouDiv {
   position: absolute;
-  left: 41%;
-  top: 40%;
+  left: 35%;
+  top: 45%;
 }
 
 #thankYouList {

@@ -3,5 +3,13 @@
 } */
 
 h1 {
-  font-size: 50px;
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+li {
+  font-size: 20px;
 }

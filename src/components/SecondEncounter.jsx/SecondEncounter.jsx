@@ -136,7 +136,9 @@ function SecondEncounter() {
           </div> */}
           <div className='golemIdle'></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">What!? Another Baddy!? Oh no! Use the Dino Kick button to defeat them to continue on.</p>
+            <p id="textBoxText">{selectedCharacter[0] && selectedCharacter[0].name}: "Oh my garsh! Another Baddy!? Oh no!" 
+              <br/>Use the Dino Kick button to defeat them to continue on.
+            </p>
           </div>
         </div>
       </>
@@ -181,7 +183,7 @@ function SecondEncounter() {
           </div> */}
           <div className="golemHurt"></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">You: "Take that you bully!"</p>
+            <p id="textBoxText">{selectedCharacter[0] && selectedCharacter[0].name}: "Take that you bully!"</p>
           </div>
         </div>
       </>
@@ -226,7 +228,7 @@ function SecondEncounter() {
           </div> */}
           <div className="golemAttack"></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">You: "Take that you bully!"</p>
+            <p id="textBoxText">{selectedCharacter[0] && selectedCharacter[0].name}: "Take that you bully!"</p>
           </div>
         </div>
       </>
@@ -271,7 +273,7 @@ function SecondEncounter() {
           </div> */}
           <div className="golemDeath"></div>
           <div id="textBoxDiv">
-            <p id="textBoxText">You: "Finally! I really hope that's the last of the baddies!"</p>
+            <p id="textBoxText">{selectedCharacter[0] && selectedCharacter[0].name}: "Finally! I really hope that's the last of the baddies!"</p>
           </div>
           <button id="goToRunningPageButton" onClick={goToFriendPage}>Continue</button>
         </div>

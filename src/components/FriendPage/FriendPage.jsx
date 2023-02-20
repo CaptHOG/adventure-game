@@ -58,8 +58,8 @@ function FriendPage() {
             <img id="kurtImg" src="images/robot-kurt-pixel.jpeg" width="300px"/>
           </div>
           <div id="textBoxDiv">
-            <p id="textBoxText">You: "I'm here Kurt! Ready to help you with your code!"
-              <br/>Kurt: "Hooray! Thank you! I'm trying to figure out why .map is not a function!"
+            <p id="textBoxText">{selectedCharacter[0] && selectedCharacter[0].name}: "I'm here Kurt! Ready to help you with your code!"
+              <br/>Kurt: "Hooray! Thank you {selectedCharacter[0] && selectedCharacter[0].name}! I'm trying to figure out why .map is not a function!"
             </p>
           </div>
           <button onClick={goToAboutPage}>Continue</button>

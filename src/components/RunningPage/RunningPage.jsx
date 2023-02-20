@@ -60,7 +60,7 @@ function RunningPage() {
       </div>
       <div className='guardianIdle'></div> */}
       <div id="textBoxDiv">
-        <p id="textBoxText">You: "Now I need to hurry up and get to my friend's!"</p>
+        <p id="textBoxText">{selectedCharacter[0] && selectedCharacter[0].name}: "Now I need to hurry up and get to my friend's!"</p>
       </div>
       <button id="goToEncounterButton" onClick={goToSecondEncounter}>Continue</button>
     </div>
