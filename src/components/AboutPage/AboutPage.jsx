@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import './AboutPage.css';
 
 // This is one of our simplest components
@@ -7,6 +8,12 @@ import './AboutPage.css';
 // or even care what the redux state is'
 
 function AboutPage() {
+  const history = useHistory();
+
+  const goToUserPage = () => {
+    history.push('/user');
+  }
+
   return (
     <div className="container">
       <div id="technologiesDiv">
@@ -39,6 +46,7 @@ function AboutPage() {
           <li>Friends</li>
         </ul>
       </div>
+      <button onClick={goToUserPage}>Start Over</button>
       <div>
         {/* <p>This about page is for anyone to read!</p> */}
       </div>

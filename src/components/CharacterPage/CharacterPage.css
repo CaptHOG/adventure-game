@@ -1,3 +1,8 @@
+#characterPageContainer {
+  position: relative;
+  margin-top: 100px;
+}
+
 #characterNameInput {
   font-family: 'Silkscreen';
   text-align: center;

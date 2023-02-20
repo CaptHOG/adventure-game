@@ -1,14 +1,16 @@
 const energyPointsReducer = (state = 200, action) => {
   if (action.type === 'SUBTRACT_ENERGY_COST') {
-    const newAmountFromItemUse = state - action.payload;
+    // state - action.payload
+    const newAmountFromItemUse = state - 0;
     if (newAmountFromItemUse <= 0) {
-      alert('GAME OVER');
+      // alert('GAME OVER');
     }
     return newAmountFromItemUse;
   } else if (action.type === 'SUBTRACT_ENERGY_DAMAGE') {
-    const newAmountFromDamage = state - 10;
+    // state - 10
+    const newAmountFromDamage = state - 0;
     if (newAmountFromDamage <= 0) {
-      alert('GAME OVER');
+      // alert('GAME OVER');
     }
     return newAmountFromDamage;
   } else {

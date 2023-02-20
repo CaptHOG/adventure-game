@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import './FriendPage.css';
 import { useHistory } from "react-router-dom";
+import LogOutButton from "../LogOutButton/LogOutButton";
 
 
 function FriendPage() {
@@ -62,6 +63,7 @@ function FriendPage() {
               <br/>Kurt: "Hooray! Thank you {selectedCharacter[0] && selectedCharacter[0].name}! I'm trying to figure out why .map is not a function!"
             </p>
           </div>
+          <LogOutButton />
           <button onClick={goToAboutPage}>Continue</button>
         </div>
     </>

@@ -58,7 +58,7 @@ function CharacterPage() {
   }
 
   return (
-    <>
+    <div id="characterPageContainer">
       <h2>Create Character</h2>
       <form>
         <h4>Name your character</h4>
@@ -103,7 +103,7 @@ function CharacterPage() {
       </table>
       <h3>Select a character and continue on!</h3>
       <button id="goToWalkingButton" onClick={goToWalkingPage}>Continue</button>
-    </>
+    </div>
   )
 }   
 

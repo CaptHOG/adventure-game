@@ -8,6 +8,7 @@ function RegisterPage() {
 
   return (
     <div>
+      <h1>Code Cranker</h1>
       <RegisterForm />
 
       <center>

@@ -1,6 +1,6 @@
 import React from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './UserPage.css';
 
@@ -8,13 +8,17 @@ function UserPage() {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const goToCharactersPage = () => {
+    dispatch({
+      type: 'RESET_HIT_POINTS'
+    })
     history.push('/characters');
   }
 
   return (
-    <div className="container">
+    <div className="userPageContainer">
       <h1>Code Cranker</h1>
       <h2>Welcome, {user.username}!</h2>
       <h2></h2>
@@ -24,6 +28,8 @@ function UserPage() {
       {/* <p>Your ID is: {user.id}</p> */}
       {/* <LogOutButton className="btn" /> */}
       <button id="goToCharacterPageButton" onClick={goToCharactersPage}>Let's Go!</button>
+      <br/>
+      <LogOutButton />
     </div>
   );
 }

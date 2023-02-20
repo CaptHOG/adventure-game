@@ -7,6 +7,7 @@ function LoginPage() {
 
   return (
     <div>
+      <h1>Code Cranker</h1>
       <LoginForm />
 
       <center>
