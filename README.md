@@ -25,9 +25,29 @@ Selecting character
 
 <img src="public/images/selecting-character.png" width="500"/>
 
-Walking animation page
+Walking animation
 
 <img src="public/images/walking-animation.png" width="500"/>
+
+First Encounter
+
+<img src="public/images/first-encounter.png" width="500"/>
+
+Running animation
+
+<img src="public/images/running-animation.png" width="500"/>
+
+Second Encounter
+
+<img src="public/images/second-encounter.png" width="500"/>
+
+Finish page
+
+<img src="public/images/finish-page.png" width="500"/>
+
+Thank you page for presentation
+
+<img src="public/images/thank-you-page.png" width="500"/>
 <!-- This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`). -->
 
 <!-- We **STRONGLY** recommend following these instructions carefully. It's a lot, and will take some time to set up, but your life will be much easier this way in the long run. -->
