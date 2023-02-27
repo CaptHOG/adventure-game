@@ -6,14 +6,13 @@ For this project we were tasked with creating a full stack web application using
 ## Screenshots
 
 Login Page
-<!-- ![Login Page](public/images/code-cranker-login-page.png) -->
 <img src="public/images/code-cranker-login-page.png" width="500"/>
 
 Welcome Page
-![Welcome Page](public/images/code-cranker-welcome-page.png)
+<img src="public/images/code-cranker-welcome-page.png" width="500"/>
 
 Character Page
-![Character Page](public/images/code-cranker-character-page.png)
+<img src="public/images/code-cranker-character-page.png" width="500"/>
 <!-- This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`). -->
 
 <!-- We **STRONGLY** recommend following these instructions carefully. It's a lot, and will take some time to set up, but your life will be much easier this way in the long run. -->
