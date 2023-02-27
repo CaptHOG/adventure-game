@@ -1,12 +1,14 @@
 
-# Prime Solo Project Starting Repo
-This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`).
+# Code Cranker
 
-We **STRONGLY** recommend following these instructions carefully. It's a lot, and will take some time to set up, but your life will be much easier this way in the long run.
+For this project we were tasked with creating a full stack web application using React, Node JS, Express, PostgreSQL. I decided to make a clickable adventure and learned how to use CSS keyframes to animate sprite sheets.
+<!-- This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`). -->
 
-## Use the Template for This Repository (Don't Clone)
+<!-- We **STRONGLY** recommend following these instructions carefully. It's a lot, and will take some time to set up, but your life will be much easier this way in the long run. -->
 
-- Don't Fork or Clone. Instead, click the `Use this Template` button, and make a copy to your personal account. Make the project `PUBLIC`!
+<!-- ## Use the Template for This Repository (Don't Clone)
+
+- Don't Fork or Clone. Instead, click the `Use this Template` button, and make a copy to your personal account. Make the project `PUBLIC`! -->
 
 
 ## Prerequisites
@@ -31,7 +33,7 @@ CREATE TABLE "user" (
 
 If you would like to name your database something else, you will need to change `prime_app` to the name of your new database name in `server/modules/pool.js`
 
-## Development Setup Instructions
+<!-- ## Development Setup Instructions
 
 - Run `npm install`
 - Create a `.env` file at the root of the project and paste this line into the file:
@@ -42,9 +44,9 @@ If you would like to name your database something else, you will need to change 
 - Start postgres if not running already by using `brew services start postgresql`
 - Run `npm run server`
 - Run `npm run client`
-- Navigate to `localhost:3000`
+- Navigate to `localhost:3000` -->
 
-## Debugging
+<!-- ## Debugging
 
 To debug, you will need to run the client-side separately from the server. Start the client by running the command `npm run client`. Start the debugging server by selecting the Debug button.
 
@@ -52,9 +54,9 @@ To debug, you will need to run the client-side separately from the server. Start
 
 Then make sure `Launch Program` is selected from the dropdown, then click the green play arrow.
 
-![VSCode Debug Bar](documentation/images/vscode-debug-bar.png)
+![VSCode Debug Bar](documentation/images/vscode-debug-bar.png) -->
 
-## Testing Routes with Postman
+<!-- ## Testing Routes with Postman
 
 To use Postman with this repo, you will need to set up requests in Postman to register a user and login a user at a minimum.
 
@@ -67,25 +69,25 @@ Keep in mind that once you using the login route, Postman will manage your sessi
    2. `POST /api/user/login` will login a user, see body to change username/password
    3. `GET /api/user` will get user information, by default it's not very much
 
-After running the login route above, you can try any other route you've created that requires a logged in user!
+After running the login route above, you can try any other route you've created that requires a logged in user! -->
 
-## Production Build
+<!-- ## Production Build
 
 Before pushing to Heroku, run `npm run build` in terminal. This will create a build folder that contains the code Heroku will be pointed at. You can test this build by typing `npm start`. Keep in mind that `npm start` will let you preview the production build but will **not** auto update.
 
 - Start postgres if not running already by using `brew services start postgresql`
 - Run `npm start`
-- Navigate to `localhost:5000`
+- Navigate to `localhost:5000` -->
 
-## Lay of the Land
+<!-- ## Lay of the Land
 
 There are a few videos linked below that show a walkthrough the client and sever setup to help acclimatize to the boilerplate. Please take some time to watch the videos in order to get a better understanding of what the boilerplate is like.
 
 - [Initial Set](https://vimeo.com/453297271)
 - [Server Walkthrough](https://vimeo.com/453297212)
-- [Client Walkthrough](https://vimeo.com/453297124)
+- [Client Walkthrough](https://vimeo.com/453297124) -->
 
-Directory Structure:
+<!-- Directory Structure:
 
 - `src/` contains the React application
 - `public/` contains static assets for the client-side
@@ -104,9 +106,9 @@ This code is also heavily commented. We recommend reading through the comments, 
   - LoginPage/LoginPage
   - RegisterPage/RegisterPage
   - LogOutButton/LogOutButton
-  - ProtectedRoute/ProtectedRoute
+  - ProtectedRoute/ProtectedRoute -->
 
-## Deployment
+<!-- ## Deployment
 
 1. Create a new Heroku project
 1. Link the Heroku project to the project GitHub Repo
@@ -114,8 +116,8 @@ This code is also heavily commented. We recommend reading through the comments, 
 1. Connect to the Heroku Postgres database from Postico
 1. Create the necessary tables
 1. Add an environment variable for `SERVER_SESSION_SECRET` with a nice random string for security
-1. In the deploy section, select manual deploy
+1. In the deploy section, select manual deploy -->
 
-## Update Documentation
+<!-- ## Update Documentation
 
-Customize this ReadMe and the code comments in this project to read less like a starter repo and more like a project. Here is an example: https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
+Customize this ReadMe and the code comments in this project to read less like a starter repo and more like a project. Here is an example: https://gist.github.com/PurpleBooth/109311bb0361f32d87a2 -->
