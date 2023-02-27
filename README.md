@@ -16,6 +16,18 @@ Welcome Page
 Character Page
 
 <img src="public/images/code-cranker-character-page.png" width="500"/>
+
+Adding characters
+
+<img src="public/images/adding-characters.png" width="500"/>
+
+Selecting character
+
+<img src="public/images/selecting-character.png" width="500"/>
+
+Walking animation page
+
+<img src="public/images/walking-animation.png" width="500"/>
 <!-- This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`). -->
 
 <!-- We **STRONGLY** recommend following these instructions carefully. It's a lot, and will take some time to set up, but your life will be much easier this way in the long run. -->
