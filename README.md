@@ -6,7 +6,8 @@ For this project we were tasked with creating a full stack web application using
 ## Screenshots
 
 Login Page
-![Login Page](public/images/code-cranker-login-page.png)
+<!-- ![Login Page](public/images/code-cranker-login-page.png) -->
+<img src="public/images/code-cranker-login-page.png" width="200"/>
 
 Welcome Page
 ![Welcome Page](public/images/code-cranker-welcome-page.png)
@@ -22,15 +23,15 @@ Character Page
 - Don't Fork or Clone. Instead, click the `Use this Template` button, and make a copy to your personal account. Make the project `PUBLIC`! -->
 
 
-## Prerequisites
+<!-- ## Prerequisites
 
 Before you get started, make sure you have the following software installed on your computer:
 
 - [Node.js](https://nodejs.org/en/)
 - [PostrgeSQL](https://www.postgresql.org/)
-- [Nodemon](https://nodemon.io/)
+- [Nodemon](https://nodemon.io/) -->
 
-## Create database and table
+<!-- ## Create database and table
 
 Create a new database called `prime_app` and create a `user` table:
 
@@ -42,7 +43,7 @@ CREATE TABLE "user" (
 );
 ```
 
-If you would like to name your database something else, you will need to change `prime_app` to the name of your new database name in `server/modules/pool.js`
+If you would like to name your database something else, you will need to change `prime_app` to the name of your new database name in `server/modules/pool.js` -->
 
 <!-- ## Development Setup Instructions
 
