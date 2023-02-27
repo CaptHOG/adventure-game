@@ -7,7 +7,7 @@ For this project we were tasked with creating a full stack web application using
 
 Login Page
 <!-- ![Login Page](public/images/code-cranker-login-page.png) -->
-<img src="public/images/code-cranker-login-page.png" width="200"/>
+<img src="public/images/code-cranker-login-page.png" width="500"/>
 
 Welcome Page
 ![Welcome Page](public/images/code-cranker-welcome-page.png)
