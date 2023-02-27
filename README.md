@@ -1,7 +1,12 @@
 
 # Code Cranker
 
-For this project we were tasked with creating a full stack web application using React, Node JS, Express, PostgreSQL. I decided to make a clickable adventure and learned how to use CSS keyframes to animate sprite sheets.
+For this project we were tasked with creating a full stack web application using React, Node JS, Express, and PostgreSQL. I decided to make a clickable adventure and learned how to use CSS keyframes to animate sprite sheets.
+
+## Screenshots
+
+Login Page
+![Login Page](public/images/code-cranker-login-page.png)
 <!-- This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`). -->
 
 <!-- We **STRONGLY** recommend following these instructions carefully. It's a lot, and will take some time to set up, but your life will be much easier this way in the long run. -->
