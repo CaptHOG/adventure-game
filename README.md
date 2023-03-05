@@ -3,11 +3,18 @@
 
 For this project we were tasked with creating a full stack web application using React, Node JS, Express, and PostgreSQL. I decided to make a clickable adventure and learned how to use CSS keyframes to animate sprite sheets.
 
-![video](public/video/adventure-game-video.mov)
+## Screenshots
 
-<!-- ## Screenshots
+Login, Welcome page, Character choice, and Walking animation
+![adventure video 1](public/images/adventure-video-1.gif)
 
-Login Page
+Walking animation, First encounter, Running animation
+![adventure video 2](public/images/adventure-video-2.gif)
+
+Running animation, Second encounter, Friend page, Thank you page
+![adventure video 3](public/images/adventure-video-3.gif)
+
+<!-- Login Page
 
 <img src="public/images/code-cranker-login-page.png" width="500"/>
 
